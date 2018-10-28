@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>App1</title>
+  <title>ENIW</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,5 +10,19 @@
 </head>
 <body>
   <app-root></app-root>
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyC5Uizsd46q33FpRKqHKCSJs9rVRzzAsZk",
+      authDomain: "eniw-project-lab-2.firebaseapp.com",
+      databaseURL: "https://eniw-project-lab-2.firebaseio.com",
+      projectId: "eniw-project-lab-2",
+      storageBucket: "",
+      messagingSenderId: "477788812568"
+    };
+    firebase.initializeApp(config);
+  </script>
 </body>
 </html>
