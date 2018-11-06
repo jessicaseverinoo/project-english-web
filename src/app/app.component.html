@@ -1,14 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<ul>
-  <li class="text" *ngFor="let item of items | async">
-    {{item.name}}
-  </li>
-</ul>
+<h1 *ngIf='authService.user | async'>Welcome {{ (authService.user | async)?.email }}!</h1>
 
-<ul>
-  <li *ngFor="let todo of (todos$ | async)" [class.done]="todo.done">
-    {{ todo.content }}
-  </li>
-</ul>
+<div *ngIf='!(authService.user | async)'>
+  <input type='text' #email ngModel='email' placeholder='email'>
+  <input type='password' #password ngModel='password' placeholder='email'>
+
+  <button (click)='signup(email.value, password.value)'>
+    Signup
+  </button>
+
+  <button (click)='login(email.value, password.value)' [disabled]='!email || !password'>
+    Login
+  </button>
+</div>
+
+<button (click)='logout()' *ngIf='authService.user | async'>
+  Logout
+</button>
 
 <router-outlet></router-outlet>

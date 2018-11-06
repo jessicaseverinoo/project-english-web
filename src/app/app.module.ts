@@ -8,6 +8,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabase } from '@angular/fire/database';
+import { AuthService } from 'src/auth.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AngularFireDatabase } from '@angular/fire/database';
     AngularFireStorageModule // imports firebase/storage only needed for storage features
   ],
   providers: [
-    AngularFireDatabase
+    AngularFireDatabase,
+    AuthService
   ],
   bootstrap: [
     AppComponent
