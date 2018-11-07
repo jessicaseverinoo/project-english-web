@@ -9,10 +9,26 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { AuthService } from 'src/auth.service';
+import { SairComponent } from './sair/sair.component';
+import { MenuProfessorComponent } from './menu-professor/menu-professor.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
+import { MenuComponent } from './menu/menu.component';
+import { ProgressoTurmaComponent } from './progresso-turma/progresso-turma.component';
+import { CadastroTarefaComponent } from './cadastro-tarefa/cadastro-tarefa.component';
+import { CadastroQuestaoComponent } from './cadastro-questao/cadastro-questao.component';
+import { NiveisQuestoesComponent } from './niveis-questoes/niveis-questoes.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SairComponent,
+    MenuProfessorComponent,
+    CadastroComponent,
+    MenuComponent,
+    ProgressoTurmaComponent,
+    CadastroTarefaComponent,
+    CadastroQuestaoComponent,
+    NiveisQuestoesComponent
   ],
   imports: [
     BrowserModule,

@@ -17,18 +17,6 @@ export class AppComponent {
   email: string;
   password: string;
 
-  // ngOnInit(): void {
-  //  throw new Error('Method not implemented.');
-  // }
-
-  // constructor(public afAuth: AngularFireAuth) { }
-  // login() {
-  //   this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
-  // }
-  // logout() {
-  //   this.afAuth.auth.signOut();
-  // }
-
   constructor(public authService: AuthService) {}
 
   signup(email, password) {
