@@ -17,6 +17,12 @@ import { ProgressoTurmaComponent } from './progresso-turma/progresso-turma.compo
 import { CadastroTarefaComponent } from './cadastro-tarefa/cadastro-tarefa.component';
 import { CadastroQuestaoComponent } from './cadastro-questao/cadastro-questao.component';
 import { NiveisQuestoesComponent } from './niveis-questoes/niveis-questoes.component';
+import { TarefasComponent } from './tarefas/tarefas.component';
+import { CadastroQuestoesComponent } from './tarefas/cadastro-questoes/cadastro-questoes.component';
+import { VerQuestoesComponent } from './tarefas/ver-questoes/ver-questoes.component';
+import { NiveisComponent } from './tarefas/niveis/niveis.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { ResolverQuestoesComponent } from './resolver-questoes/resolver-questoes.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +34,13 @@ import { NiveisQuestoesComponent } from './niveis-questoes/niveis-questoes.compo
     ProgressoTurmaComponent,
     CadastroTarefaComponent,
     CadastroQuestaoComponent,
-    NiveisQuestoesComponent
+    NiveisQuestoesComponent,
+    TarefasComponent,
+    CadastroQuestoesComponent,
+    VerQuestoesComponent,
+    NiveisComponent,
+    PerfilComponent,
+    ResolverQuestoesComponent
   ],
   imports: [
     BrowserModule,
