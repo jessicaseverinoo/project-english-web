@@ -1,3 +1,4 @@
+import { AuthService } from '../../auth.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SairComponent implements OnInit {
 
-  constructor() { }
+  email: string;
+  password: string;
+
+  constructor(public authService: AuthService) {}
+
+  logout() {
+    this.authService.logout();
+  }
 
   ngOnInit() {
   }
