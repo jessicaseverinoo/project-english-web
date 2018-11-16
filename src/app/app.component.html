@@ -1,4 +1,4 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<!-- The content below is only a placeholder and can be replaced.
 <h1 *ngIf='authService.user | async'>Welcome {{ (authService.user | async)?.email }}!</h1>
 
 <div *ngIf='!(authService.user | async)'>
@@ -16,6 +16,8 @@
 
 <button (click)='logout()' *ngIf='authService.user | async'>
   Logout
-</button>
+</button> -->
+
+<app-menu></app-menu>
 
 <router-outlet></router-outlet>

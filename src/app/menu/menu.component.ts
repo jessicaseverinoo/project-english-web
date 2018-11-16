@@ -10,6 +10,11 @@ export class MenuComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+  }
+
+  public onClickToggle() {
+    // $('#sidebar').toggleClass('active');
   }
 
 }
