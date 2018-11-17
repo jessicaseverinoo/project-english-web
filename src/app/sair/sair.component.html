@@ -1,3 +1,3 @@
-<p>
-  sair works!
-</p>
+<button (click)='logout()' *ngIf='authService.user | async'>
+  Logout
+</button>
