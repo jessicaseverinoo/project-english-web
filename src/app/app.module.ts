@@ -23,6 +23,7 @@ import { VerQuestoesComponent } from './tarefas/ver-questoes/ver-questoes.compon
 import { NiveisComponent } from './tarefas/niveis/niveis.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { ResolverQuestoesComponent } from './resolver-questoes/resolver-questoes.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ResolverQuestoesComponent } from './resolver-questoes/resolver-questoes
     VerQuestoesComponent,
     NiveisComponent,
     PerfilComponent,
-    ResolverQuestoesComponent
+    ResolverQuestoesComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

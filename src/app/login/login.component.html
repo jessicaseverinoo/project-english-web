@@ -1,0 +1,27 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h1 *ngIf='authService.user | async'>Welcome {{ (authService.user | async)?.email }}!</h1>
+
+<section id="login">
+  <div class="logo-login">
+    <p>Colocar a logo aqui</p>    
+  </div>
+  <div *ngIf='!(authService.user | async)'>
+    <div class="form-group">
+      <input class="ipt-email form-control" type='email' #email ngModel='email' placeholder='email'>
+    </div>
+    <div class="form-group">
+      <input class="ipt-senha form-control" type='password' #password ngModel='password' placeholder='senha'>
+    </div>
+    <div>
+      <button class="btn-login btn btn-primary btn-lg btn-block" (click)='login(email.value, password.value)' [disabled]='!email || !password'>
+        Login
+      </button>
+    </div>
+    <div>
+      <button class="btn-criar-usuario btn btn-outline-secondary" (click)='signup(email.value, password.value)'>
+        Cadastrar
+      </button>
+    </div>
+  </div>
+  <button class="btn-sair" (click)='logout()' *ngIf='authService.user | async'>Sair</button>
+</section>
