@@ -25,6 +25,7 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { ResolverQuestoesComponent } from './resolver-questoes/resolver-questoes.component';
 import { LoginComponent } from './login/login.component';
 import { FormGroup, FormControl, ReactiveFormsModule, Validators, FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { FormGroup, FormControl, ReactiveFormsModule, Validators, FormsModule } 
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,

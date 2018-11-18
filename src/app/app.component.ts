@@ -1,7 +1,7 @@
 import { AuthService } from './../auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
@@ -18,7 +18,9 @@ export class AppComponent {
   email: string;
   password: string;
 
-  constructor(public authService: AuthService) {}
+  constructor(
+    public authService: AuthService
+  ) {}
 
   signup(email, password) {
     this.authService.signup(email, password);

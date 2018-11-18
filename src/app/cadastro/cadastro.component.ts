@@ -1,8 +1,10 @@
-import { from } from 'rxjs';
+import { from, Observable } from 'rxjs';
 import { FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Component, OnInit } from '@angular/core';
 import { database } from 'firebase';
-import { Pessoa } from './../Pessoa';
+import { Usuario } from './../Usuario';
+import { AngularFireList } from '@angular/fire/database';
 
 @Component({
   selector: 'app-cadastro',
@@ -11,35 +13,47 @@ import { Pessoa } from './../Pessoa';
 })
 export class CadastroComponent implements OnInit {
 
-  /*constructor(
-    public primeiroNome: string,
-    public ultimoNome: string,
-    public cargo: string,
-    public nomeEscola: string,
-    public dtNascimento: string,
-    public email: string,
-    public senha: string,
-    public confirmaSenha: string
-  ) { }*/
+  usuarioCollectionRef: AngularFirestoreCollection<Usuario>;
+  usuarios$: Observable<Usuario[]>;
 
-  constructor( ) { }
+  constructor(private db: AngularFirestore) {
+    /*this.contasUsuarios = db.collection<Usuario>('usuarios');*/
+    this.usuarioCollectionRef = this.db.collection<Usuario>('usuarios');
+    this.usuarios = this.usuarioCollectionRef.valueChanges();
+  }
+
+  private contasUsuarios: AngularFirestoreCollection<Usuario>;
+  usuarios: Observable<Usuario[]>;
 
   formularioCadastro = new FormGroup ({
-    primeiroNome: new FormControl(''),
-    ultimoNome: new FormControl(''),
-    cargo: new FormControl(''),
-    nomeEscola: new FormControl(''),
-    dtNascimento: new FormControl(''),
-    email: new FormControl(''),
-    senha: new FormControl(''),
-    confirmaSenha: new FormControl('')
+    primeiroNome: new FormControl('', Validators.required),
+    ultimoNome: new FormControl('', Validators.required),
+    cargo: new FormControl('', Validators.required),
+    nomeEscola: new FormControl('', Validators.required),
+    dtNascimento: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required),
+    senha: new FormControl('', [Validators.required, Validators.minLength(6)]),
+    confirmaSenha: new FormControl('', [Validators.required, Validators.minLength(6)])
   });
 
-  ngOnInit() { }
+  addUsuario(value: string): void {
+    // ...
+  }
 
-  onSubmit() {
-    // TODO: Use EventEmitter with form value
-    console.warn(this.formularioCadastro.value);
+  deleteUsuario(usuario: any): void {
+    // ...
+  }
+
+  toggleUsuario(usuario: any): void {
+    // ...
+  }
+
+  updateUsuario(usuario: any, newValue: string): void {
+    // ...
+  }
+
+  ngOnInit(): void {
+    this.usuarios = this.db.collection<Usuario>('usuarios').valueChanges();
   }
 
   updateProfile() {

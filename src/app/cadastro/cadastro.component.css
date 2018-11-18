@@ -1,0 +1,87 @@
+#pg-cadastro {
+    background-color: #f1f1f1;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: block;
+}
+
+.pg-login-usuario {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+    padding: 20px 50px 25px 0;
+    background-color: #fff;
+}
+
+.cadastroProfessor {
+    width: 80%;
+    margin: 20px auto 50px;
+}
+
+.profile-cadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.selecionar-img {
+    margin-left: 50px;
+}
+
+.profile-cadastro .img-profile-cadastro {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.content-cadastro {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px auto 0px;
+}
+
+.primeira-coluna {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 48%;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.segunda-coluna {
+    width: 48%;
+    display: inline-block;
+    flex-wrap: wrap;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.content-cadastro .form-group {
+    width: 100%;
+}
+
+h1.info-pessoal, h1.info-conta {
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid;
+    width: 60%;
+    color: #2585e6;
+}
+
+.content-cadastro .form-control {
+    background-color: #f1f1f1;
+    border: none;
+    color: #777;
+}
+
+.linha-vertical {
+    height: auto;
+    border-left: 1px solid #ccc;
+    margin: 20px auto;
+}
