@@ -1,5 +1,8 @@
+import { from } from 'rxjs';
+import { FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { database } from 'firebase';
+import { Pessoa } from './../Pessoa';
 
 @Component({
   selector: 'app-cadastro',
@@ -8,28 +11,48 @@ import { database } from 'firebase';
 })
 export class CadastroComponent implements OnInit {
 
-  image: ImageBitmap;
-  nome: string;
-  sobrenome: string;
-  cargo: [
-    { id: 1, cargo: 'Professor' },
-    { id: 2, cargo: 'Diretor' },
-    { id: 2, cargo: 'Coordenador' }
-  ];
-  dia: number;
-  mes: number;
-  ano: number;
-  email: string;
-  senha: string;
-  selectedCargo: CadastroComponent;
+  /*constructor(
+    public primeiroNome: string,
+    public ultimoNome: string,
+    public cargo: string,
+    public nomeEscola: string,
+    public dtNascimento: string,
+    public email: string,
+    public senha: string,
+    public confirmaSenha: string
+  ) { }*/
 
-  constructor() { }
+  constructor( ) { }
 
-  ngOnInit() {
+  formularioCadastro = new FormGroup ({
+    primeiroNome: new FormControl(''),
+    ultimoNome: new FormControl(''),
+    cargo: new FormControl(''),
+    nomeEscola: new FormControl(''),
+    dtNascimento: new FormControl(''),
+    email: new FormControl(''),
+    senha: new FormControl(''),
+    confirmaSenha: new FormControl('')
+  });
+
+  ngOnInit() { }
+
+  onSubmit() {
+    // TODO: Use EventEmitter with form value
+    console.warn(this.formularioCadastro.value);
   }
 
-  onSelect(cargo: CadastroComponent): void {
-    this.selectedCargo = cargo;
+  updateProfile() {
+    this.formularioCadastro.patchValue({
+      primeiroNome: 'Jessica',
+      ultimoNome: 'Severino',
+      cargo: 'Professora',
+      escola: 'IFSP Catanduva',
+      dtNascimento: '27/04/1993',
+      email: 'jessica.severino@aluno.ifsp.edu.br',
+      senha: 'admin123',
+      confirmaSenha: 'admin123'
+    });
   }
 
 }

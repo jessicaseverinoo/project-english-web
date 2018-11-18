@@ -24,6 +24,7 @@ import { NiveisComponent } from './tarefas/niveis/niveis.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { ResolverQuestoesComponent } from './resolver-questoes/resolver-questoes.component';
 import { LoginComponent } from './login/login.component';
+import { FormGroup, FormControl, ReactiveFormsModule, Validators, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,8 @@ import { LoginComponent } from './login/login.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase), // imports firebase/app needed for everything
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features

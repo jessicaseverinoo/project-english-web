@@ -2,62 +2,79 @@
     <button href="#" type="button" class="btn btn-primary">Login</button>
 </div>
 
-<form>
+<form [formGroup]="formularioCadastro" (ngSubmit)="onSubmit()">
   <div class="custom-file">
     <input type="file" class="custom-file-input" id="validatedCustomFile" required>
     <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
     <div class="invalid-feedback">Example invalid custom file feedback</div>
   </div>
-
-  <!--<div class="form-group">
+  <div class="form-group">
     <label for="exampleFormControlInput1">Nome</label>
-    <input [(ngModel)]="nome" placeholder="Primeiro Nome">
+    <input type="text" class="form-control" id="primeiroNome"
+      required
+      formControlName="primeiroNome"
+      placeholder="Primeiro Nome">
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Sobrenome</label>
-    <input [(ngModel)]="Sobrenome" placeholder="Último Nome">
+    <input
+      type="text" class="form-control" id="ultimoNome"
+      required
+      formControlName="ultimoNome"
+      placeholder="Último Nome">
   </div>
-  <div class="form-row align-items-center">
-    <div class="col-auto my-1">
-      <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-        <option *ngFor="cargo"
-                [class.selected]="cargo === selectedCargo"
-                (click)="onSelect(cargo)">
-        </option>
-      </select>
-    </div>
-    <div class="col-auto my-1">
-      <div class="custom-control custom-checkbox mr-sm-2">
-        <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-        <label class="custom-control-label" for="customControlAutosizing">Concordo com os termos de uso</label>
-      </div>
-    </div>
-  </div>-->
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Cargo (Professou ou Aluno</label>
+    <input
+      type="text" class="form-control" id="cargo"
+      required
+      formControlName="cargo"
+      placeholder="Digite Professor ou Aluno"
+    >
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Escola</label>
+    <input
+      type="text" class="form-control" id="escola"
+      required
+      formControlName="nomeEscola"
+      placeholder="Nome da Escola"
+    >
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Data de Nascimento</label>
+    <input
+      type="text" lass="form-control" id="dtNascimento"
+      required
+      formControlName="dtNascimento"
+      placeholder="dia/mês/ano">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Email</label>
+    <input
+      type="text" class="form-control" id="email"
+      required
+      formControlName="email"
+      placeholder="exemplo@exemplo.com">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Senha</label>
+    <input
+      type="text" class="form-control" id="senha"
+      required
+      formControlName="senha"
+      placeholder="**************">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Confirme sua senha</label>
+    <input
+      type="text" class="form-control" id="confirmaSenha"
+      required
+      formControlName="confirmaSenha"
+      placeholder="**************"
+      formControlName="confirmaSenha">
+  </div>
+  <button type="submit" [disabled]="!formularioCadastro.valid">Confirmar Cadastro</button>
 
-  <div class="form-group">
-    <label for="inputState">Escola</label>
-    <select id="inputState" class="form-control">
-      <option selected>Choose...</option>
-      <option>IFSP Catanduva</option>
-      <option>ETEC Elias Nechar</option>
-      <option>Objetivo</option>
-      <option>COC</option>
-      <option>Colegião</option>
-      <option>Ressureição</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-    <small id="passwordHelpInline" class="text-muted">
-      Must be 8-20 characters long.
-    </small>
-  </div>
-  <button type="submit" class="btn btn-primary mb-2">Confirmar Cadastro</button>
+  <button (click)="updateProfile()">Update Profile</button>
 </form>
