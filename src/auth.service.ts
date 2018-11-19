@@ -1,3 +1,4 @@
+import { PerfilComponent } from './app/perfil/perfil.component';
 import { Injectable } from '@angular/core';
 
 import { AngularFireAuth } from '@angular/fire/auth';

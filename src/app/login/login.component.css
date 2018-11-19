@@ -1,0 +1,22 @@
+#login {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#rd-login .form-check-inline {
+    margin-bottom: 20px;
+}
+
+#rd-login .form-check-inline input,
+#rd-login .form-check-inline label {
+    cursor: pointer;
+}
+
+#cadastro-professor {
+    margin: 15px auto 0px;
+    display: block;
+}

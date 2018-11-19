@@ -1,26 +1,24 @@
-import { AuthService } from './../auth.service';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
+import { AuthService } from './../../auth.service';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable, from } from 'rxjs';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { constructor } from 'q';
 import { auth } from 'firebase/app';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: [ './login.component.css' ]
 })
 
-export class AppComponent {
+export class LoginComponent {
+
   email: string;
   password: string;
 
-  constructor(
-    public authService: AuthService
-  ) {}
+  constructor(public authService: AuthService) {}
 
   signup(email, password) {
     this.authService.signup(email, password);
