@@ -23,13 +23,9 @@ import { VerQuestoesComponent } from './tarefas/ver-questoes/ver-questoes.compon
 import { NiveisComponent } from './tarefas/niveis/niveis.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { ResolverQuestoesComponent } from './resolver-questoes/resolver-questoes.component';
-<<<<<<< HEAD
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-=======
 import { LoginComponent } from './login/login.component';
 import { FormGroup, FormControl, ReactiveFormsModule, Validators, FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
->>>>>>> 4d4774e237aa9d3bbf397f47730eab98793964de
 
 @NgModule({
   declarations: [
@@ -59,8 +55,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AngularFireModule.initializeApp(environment.firebase), // imports firebase/app needed for everything
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
-    AngularFireStorageModule, // imports firebase/storage only needed for storage features
-    NgbModule
+    AngularFireStorageModule
   ],
   providers: [
     AngularFireDatabase,

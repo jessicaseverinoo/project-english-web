@@ -7,15 +7,17 @@ import { ResolverQuestoesComponent } from './resolver-questoes/resolver-questoes
 import { NiveisQuestoesComponent } from './niveis-questoes/niveis-questoes.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ProgressoTurmaComponent } from './progresso-turma/progresso-turma.component';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
   { path: 'perfil', component: PerfilComponent },
   { path: 'tarefas', component: CadastroTarefaComponent },
-  { path: 'turmas', component: CadastroComponent },
+  { path: 'cadastro', component: CadastroComponent },
   { path: 'alunos', component: CadastroComponent },
   { path: 'progresso', component: ProgressoTurmaComponent },
   { path: 'resolver-questoes', component: ResolverQuestoesComponent },
-  { path: 'niveis', component: NiveisQuestoesComponent }
+  { path: 'niveis', component: NiveisQuestoesComponent },
+  { path: 'login', component: LoginComponent }
 ];
 
 @NgModule({

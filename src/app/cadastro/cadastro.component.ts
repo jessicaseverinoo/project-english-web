@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import { database } from 'firebase';
 import { Usuario } from './../Usuario';
 import { AngularFireList } from '@angular/fire/database';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
@@ -16,7 +17,7 @@ export class CadastroComponent implements OnInit {
   usuarioCollectionRef: AngularFirestoreCollection<Usuario>;
   usuarios$: Observable<Usuario[]>;
 
-  constructor(private db: AngularFirestore) {
+  constructor(private db: AngularFirestore, private router: Router) {
     /*this.contasUsuarios = db.collection<Usuario>('usuarios');*/
     this.usuarioCollectionRef = this.db.collection<Usuario>('usuarios');
     this.usuarios = this.usuarioCollectionRef.valueChanges();
@@ -67,6 +68,10 @@ export class CadastroComponent implements OnInit {
       senha: 'admin123',
       confirmaSenha: 'admin123'
     });
+  }
+
+  login() {
+    this.router.navigateByUrl('login');
   }
 
 }

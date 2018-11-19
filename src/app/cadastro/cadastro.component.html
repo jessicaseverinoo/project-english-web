@@ -1,6 +1,6 @@
 <section id="pg-cadastro">
   <div class="pg-login-usuario">
-      <button href="#" type="button" class="btn btn-primary">Login</button>
+      <button type="button" class="btn btn-primary" (click)="login()">Login</button>
   </div>
 
   <form [formGroup]="formularioCadastro" (ngSubmit)="onSubmit()" class="cadastroProfessor">
