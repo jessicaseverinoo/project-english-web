@@ -23,6 +23,7 @@ import { VerQuestoesComponent } from './tarefas/ver-questoes/ver-questoes.compon
 import { NiveisComponent } from './tarefas/niveis/niveis.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { ResolverQuestoesComponent } from './resolver-questoes/resolver-questoes.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ResolverQuestoesComponent } from './resolver-questoes/resolver-questoes
     AngularFireModule.initializeApp(environment.firebase), // imports firebase/app needed for everything
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
-    AngularFireStorageModule // imports firebase/storage only needed for storage features
+    AngularFireStorageModule, // imports firebase/storage only needed for storage features
+    NgbModule
   ],
   providers: [
     AngularFireDatabase,

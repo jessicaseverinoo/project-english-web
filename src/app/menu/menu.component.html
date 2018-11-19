@@ -1,50 +1,45 @@
-<div class="wrapper">
+<div class="wrapper col-md-12 float-left p-0">
   <!-- Sidebar -->
   <nav id="sidebar">
-      <div class="sidebar-header">
-          <h3>Bootstrap Sidebar</h3>
-      </div>
+    <div class="sidebar-header text-center">
+      <img src="../../assets/global.png" alt="Usuário" class="rounded-circle w-50">
+    </div>
 
-      <ul class="list-unstyled components">
-          <p>Dummy Heading</p>
-          <li class="active">
-              <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-              <ul class="collapse list-unstyled" id="homeSubmenu">
-                  <li>
-                      <a href="#">Home 1</a>
-                  </li>
-                  <li>
-                      <a href="#">Home 2</a>
-                  </li>
-                  <li>
-                      <a href="#">Home 3</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-              <a href="#">About</a>
-          </li>
-          <li>
-              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-              <ul class="collapse list-unstyled" id="pageSubmenu">
-                  <li>
-                      <a href="#">Page 1</a>
-                  </li>
-                  <li>
-                      <a href="#">Page 2</a>
-                  </li>
-                  <li>
-                      <a href="#">Page 3</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-              <a href="#">Portfolio</a>
-          </li>
-          <li>
-              <a href="#">Contact</a>
-          </li>
-      </ul>
+    <ul class="list-unstyled components text-center">
+      <li>
+        <a routerLink="perfil">Perfil</a>
+      </li>
+      <li>
+        <a routerLink="turmas">Nova Turma</a>
+      </li>
+      <li>
+        <a routerLink="alunos">Cadastrar Aluno</a>
+      </li>
+      <li>
+        <a routerLink="progresso">Progresso Turmas</a>
+      </li>
+      <li>
+        <a routerLink="niveis">Questões</a>
+      </li>
+      <li>
+        <a (click)="logout()">Sair</a>
+      </li>
+    </ul>
+
   </nav>
+  <!-- Page Content -->
+  <div id="content" class="container">
 
+    <!-- <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+
+        <button type="button" id="sidebarCollapse" class="btn btn-light-outline" (click)="onClickToggle()">
+          <i class="fas fa-align-left"></i>
+          <span> >> </span>
+        </button>
+      </div>
+    </nav> -->
+    <router-outlet></router-outlet>
+
+  </div>
 </div>

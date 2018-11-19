@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/auth.service';
+declare var $: any;
 
 @Component({
   selector: 'app-menu',
@@ -7,14 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(public authService: AuthService) { }
 
   ngOnInit() {
 
   }
 
   public onClickToggle() {
-    // $('#sidebar').toggleClass('active');
+     // open or close navbar
+     $('#sidebar').toggleClass('active');
+     // close dropdowns
+     $('.collapse.in').toggleClass('in');
+     // and also adjust aria-expanded attributes we use for the open/closed arrows
+     // in our CSS
+     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+  }
+
+  logout() {
+    this.authService.logout();
   }
 
 }
