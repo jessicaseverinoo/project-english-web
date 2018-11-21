@@ -33,8 +33,7 @@
 
         <div class="form-group dt-nascimento-cadastro">
           <label for="exampleFormControlInput1">Data de Nascimento</label>
-          <input
-            type="text" class="form-control" id="dtNascimento"
+          <input type="text" class="form-control" id="dtNascimento"
             required
             formControlName="dtNascimento"
             placeholder="dia/mês/ano">
@@ -42,8 +41,7 @@
 
         <div class="form-group cargo-cadastro">
           <label for="exampleFormControlInput1">Cargo (Professou ou Aluno</label>
-          <input
-            type="text" class="form-control" id="cargo"
+          <input type="text" class="form-control" id="cargo"
             required
             formControlName="cargo"
             placeholder="Digite Professor ou Aluno">
@@ -51,8 +49,7 @@
 
         <div class="form-group escola-cadastro">
           <label for="exampleFormControlInput1">Escola</label>
-          <input
-            type="text" class="form-control" id="escola"
+          <input type="text" class="form-control" id="escola"
             required
             formControlName="nomeEscola"
             placeholder="Nome da Escola">
@@ -65,8 +62,7 @@
         <h1 class="info-conta">Informações da conta</h1>
         <div class="form-group email-cadastro">
           <label for="exampleFormControlInput1">Email</label>
-          <input
-            type="text" class="form-control" id="email"
+          <input type="text" class="form-control" id="email"
             required
             formControlName="email"
             placeholder="exemplo@exemplo.com">
@@ -74,8 +70,7 @@
 
         <div class="form-group senha-cadastro">
           <label for="exampleFormControlInput1">Senha</label>
-          <input
-            type="password" class="form-control" id="senha"
+          <input type="password" class="form-control" id="senha"
             required
             formControlName="senha"
             placeholder="**************">
@@ -83,20 +78,21 @@
 
         <div class="form-group confirma-senha-cadastro">
           <label for="exampleFormControlInput1">Confirme sua senha</label>
-          <input
-            type="password" class="form-control" id="confirmaSenha"
+          <input type="password" class="form-control" id="confirmaSenha"
             required
             formControlName="confirmaSenha"
             placeholder="**************"
             formControlName="confirmaSenha">
         </div>
-        <button class="btn btn-primary" type="submit" [disabled]="!formularioCadastro.valid">Confirmar Cadastro</button>
-        <button class="btn btn-link" (click)="updateProfile()">Atualizar Cadastro</button>
+        <button class="btn btn-primary" type="button" (click)="addUsuario()">Confirmar Cadastro</button>
+        <button class="btn btn-link" (click)="addUsuario()">Atualizar Cadastro</button>
       </div>
     </div>
   </form>
 
   <ul>
-    <li *ngFor="let usuarios of (usuariosTodos$ | async)">{{ usuarios.tfqtlvB0F60u7KPHbmTY }}</li>
+    <li *ngFor="let usuario of (usuarios$ | async)" [class.done]="usuario.done">
+      {{ usuario.content }}
+    </li>
   </ul>
 </section>

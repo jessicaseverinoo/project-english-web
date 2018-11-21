@@ -18,8 +18,7 @@ export class CadastroComponent implements OnInit {
   usuarios$: Observable<Usuario[]>;
 
   constructor(private db: AngularFirestore, private router: Router) {
-    /*this.contasUsuarios = db.collection<Usuario>('usuarios');*/
-    this.usuarioCollectionRef = this.db.collection<Usuario>('usuarios');
+    this.usuarioCollectionRef = db.collection<Usuario>('usuarios');
     this.usuarios = this.usuarioCollectionRef.valueChanges();
   }
 
@@ -37,8 +36,21 @@ export class CadastroComponent implements OnInit {
     confirmaSenha: new FormControl('', [Validators.required, Validators.minLength(6)])
   });
 
-  addUsuario(value: string): void {
-    // ...
+  addUsuario(primeiroNome: string): void {
+    console.log('entrou');
+    const id = this.db.createId();
+    /*const usuario: Usuario = {
+      primeiroNome: 'Jessica',
+      ultimoNome: 'Severino',
+      cargo: 'Professora',
+      nomeEscola: 'IFSP Catanduva',
+      dtNascimento: '27/04/1993',
+      email: 'jessica.severino@aluno.ifsp.edu.br',
+      senha: 'admin123',
+      confirmaSenha: 'admin123'
+    };*/
+    console.log('saiu');
+    // this.usuarioCollectionRef.doc(id).set(usuario);
   }
 
   deleteUsuario(usuario: any): void {
