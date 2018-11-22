@@ -6,6 +6,7 @@ import { database } from 'firebase';
 import { Usuario } from './../Usuario';
 import { AngularFireList } from '@angular/fire/database';
 import { Router } from '@angular/router';
+import { IUsuario } from './../models/iusuario.model';
 
 @Component({
   selector: 'app-cadastro',
@@ -14,18 +15,33 @@ import { Router } from '@angular/router';
 })
 export class CadastroComponent implements OnInit {
 
-  usuarioCollectionRef: AngularFirestoreCollection<Usuario>;
-  usuarios$: Observable<Usuario[]>;
-
-  constructor(private db: AngularFirestore, private router: Router) {
-    this.usuarioCollectionRef = db.collection<Usuario>('usuarios');
-    this.usuarios = this.usuarioCollectionRef.valueChanges();
-  }
+  primeiroNome: string;
+  ultimoNome: string;
+  // cargo: ECargo;
+  cargo: string;
+  nomeEscola: string;
+  dtNascimento: string;
+  email: string;
+  senha: string;
+  confirmaSenha: string;
 
   private contasUsuarios: AngularFirestoreCollection<Usuario>;
   usuarios: Observable<Usuario[]>;
 
-  formularioCadastro = new FormGroup ({
+  usuarioCollectionRef: AngularFirestoreCollection<Usuario>;
+  usuarios$: Observable<Usuario[]>;
+
+  constructor(private db: AngularFirestore, private router: Router) {
+    this.contasUsuarios = db.collection<IUsuario>('users');
+    this.usuarioCollectionRef = this.db.collection<IUsuario>('users');
+    this.usuarios = this.usuarioCollectionRef.valueChanges();
+
+    /*this.db.doc<IUsuario>('/users/jessica@gmail.com').get().subscribe(res => {
+
+    });*/
+  }
+
+  formularioCadastro = new FormGroup({
     primeiroNome: new FormControl('', Validators.required),
     ultimoNome: new FormControl('', Validators.required),
     cargo: new FormControl('', Validators.required),
@@ -36,21 +52,90 @@ export class CadastroComponent implements OnInit {
     confirmaSenha: new FormControl('', [Validators.required, Validators.minLength(6)])
   });
 
-  addUsuario(primeiroNome: string): void {
-    console.log('entrou');
-    const id = this.db.createId();
-    /*const usuario: Usuario = {
-      primeiroNome: 'Jessica',
-      ultimoNome: 'Severino',
-      cargo: 'Professora',
-      nomeEscola: 'IFSP Catanduva',
-      dtNascimento: '27/04/1993',
-      email: 'jessica.severino@aluno.ifsp.edu.br',
-      senha: 'admin123',
-      confirmaSenha: 'admin123'
-    };*/
-    console.log('saiu');
-    // this.usuarioCollectionRef.doc(id).set(usuario);
+  /*criarUsuario (usuario: IUsuario) {
+    this.db.doc<IUsuario>(`users/${usuario.email}`).get().subscribe(res => {
+      if (res.exists) {
+        alert('O usuário já é registrado, por favor autentique-se');
+      } else {
+        console.log('carregando...');
+        this.db.doc<IUsuario>(`users/${usuario.email}`)
+            .set(usuario)
+            .then(() => {
+              console.log('sucesso >>>', res);
+            })
+            .catch((err) => {
+              console.log('erro >>> ', err);
+            })
+            .finally(() => {
+              console.log('carregou');
+            });
+      }
+    });
+  }*/
+
+  criarUsuario(usuario: IUsuario) {
+    this.db.collection('users').doc(this.email).set({
+    'primeiroNome': this.primeiroNome,
+    'ultimoNome': this.ultimoNome,
+    'dtNascimento': this.dtNascimento,
+    'cargo': this.cargo,
+    'nomeEscola': this.nomeEscola,
+    'email': this.email,
+    'senha': this.senha,
+    'confirmaSenha': this.confirmaSenha});
+  }
+
+  editaUsuario (usuario: IUsuario) {
+    this.db.doc<IUsuario>(`/users/${usuario.email}`).get().subscribe(res => {
+      if (!res.exists) {
+        alert('O usuário não existe! Verifique.');
+      } else {
+        console.log('carregando...');
+        this.db.doc<IUsuario>(`/users/${usuario.email}`)
+            .set(usuario)
+            .then(() => {
+              console.log('sucesso >>>', res);
+            })
+            .catch((err) => {
+              console.log('erro >>> ', err);
+            })
+            .finally(() => {
+              console.log('carregou');
+            });
+      }
+    });
+  }
+
+  deletaUsuario (usuario: IUsuario) {
+    this.db.doc<IUsuario>(`/users/${usuario.email}`).get().subscribe(res => {
+      if (!res.exists) {
+        alert('O usuário não existe! Verifique.');
+      } else {
+        console.log('carregando...');
+        this.db.doc<IUsuario>(`/users/${usuario.email}`)
+            .delete()
+            .then(() => {
+              console.log('sucesso >>>', res);
+            })
+            .catch((err) => {
+              console.log('erro >>> ', err);
+            })
+            .finally(() => {
+              console.log('carregou');
+            });
+      }
+    });
+  }
+
+  consultaDocs() {
+  }
+
+  /*onSubmit() {
+    this.criarUsuario(this.formularioCadastro.value);
+  }*/
+
+  addUsuario(value: string): void {
+    // ...
   }
 
   deleteUsuario(usuario: any): void {
@@ -66,7 +151,9 @@ export class CadastroComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.usuarios = this.db.collection<Usuario>('usuarios').valueChanges();
+    // this.usuarios = this.db.collection<Usuario>('usuarios').valueChanges();
+    this.usuarioCollectionRef = this.db.collection('users');
+    this.usuarios = this.usuarioCollectionRef.valueChanges();
   }
 
   updateProfile() {

@@ -1,3 +1,4 @@
+import { PostsComponent } from './posts/posts.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PerfilComponent } from './perfil/perfil.component';
@@ -17,7 +18,8 @@ export const routes: Routes = [
   { path: 'progresso', component: ProgressoTurmaComponent },
   { path: 'resolver-questoes', component: ResolverQuestoesComponent },
   { path: 'niveis', component: NiveisQuestoesComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'posts', component: PostsComponent }
 ];
 
 @NgModule({
