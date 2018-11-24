@@ -1,29 +1,19 @@
 #pg-cadastro {
-    background-color: #f1f1f1;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    display: block;
+    width: calc(100% - 250px);
+    position: relative;
+    float: right;
 }
 
 .pg-login-usuario {
-    width: 80%;
-    display: flex;
-    justify-content: flex-end;
-    margin: 0 auto;
-    padding: 20px 50px 25px 0;
-    background-color: #fff;
-}
-
-.cadastroProfessor {
-    width: 80%;
-    margin: 20px auto 50px;
+    position: absolute;
+    right: 25px;
+    top: 25px;
 }
 
 .profile-cadastro {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     padding: 15px;
     background-color: #fff;
 }

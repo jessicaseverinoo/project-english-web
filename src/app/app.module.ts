@@ -26,6 +26,7 @@ import { ResolverQuestoesComponent } from './resolver-questoes/resolver-questoes
 import { LoginComponent } from './login/login.component';
 import { FormGroup, FormControl, ReactiveFormsModule, Validators, FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PostsComponent } from './posts/posts.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NiveisComponent,
     PerfilComponent,
     ResolverQuestoesComponent,
-    LoginComponent
+    LoginComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,

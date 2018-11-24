@@ -1,9 +1,9 @@
 <section id="pg-cadastro">
   <div class="pg-login-usuario">
-      <button type="button" class="btn btn-primary" (click)="login()">Login</button>
+      <button type="button" class="btn btn-primary" (click)="login()">Já possui uma conta? Faça seu login aqui!</button>
   </div>
 
-  <form [formGroup]="formularioCadastro" (ngSubmit)="onSubmit()" class="cadastroProfessor">
+  <!--<form [formGroup]="formularioCadastro" (ngSubmit)="onSubmit()" class="cadastroProfessor">
     <div class="custom-file" class="profile-cadastro">
       <img class="img-profile-cadastro" src="./../../assets/img/profile-image.gif">
       <div class="selecionar-img">
@@ -33,8 +33,7 @@
 
         <div class="form-group dt-nascimento-cadastro">
           <label for="exampleFormControlInput1">Data de Nascimento</label>
-          <input
-            type="text" class="form-control" id="dtNascimento"
+          <input type="text" class="form-control" id="dtNascimento"
             required
             formControlName="dtNascimento"
             placeholder="dia/mês/ano">
@@ -42,8 +41,7 @@
 
         <div class="form-group cargo-cadastro">
           <label for="exampleFormControlInput1">Cargo (Professou ou Aluno</label>
-          <input
-            type="text" class="form-control" id="cargo"
+          <input type="text" class="form-control" id="cargo"
             required
             formControlName="cargo"
             placeholder="Digite Professor ou Aluno">
@@ -51,8 +49,7 @@
 
         <div class="form-group escola-cadastro">
           <label for="exampleFormControlInput1">Escola</label>
-          <input
-            type="text" class="form-control" id="escola"
+          <input type="text" class="form-control" id="escola"
             required
             formControlName="nomeEscola"
             placeholder="Nome da Escola">
@@ -65,8 +62,7 @@
         <h1 class="info-conta">Informações da conta</h1>
         <div class="form-group email-cadastro">
           <label for="exampleFormControlInput1">Email</label>
-          <input
-            type="text" class="form-control" id="email"
+          <input type="text" class="form-control" id="email"
             required
             formControlName="email"
             placeholder="exemplo@exemplo.com">
@@ -74,29 +70,97 @@
 
         <div class="form-group senha-cadastro">
           <label for="exampleFormControlInput1">Senha</label>
-          <input
-            type="password" class="form-control" id="senha"
+          <input type="password" class="form-control" id="senha"
             required
             formControlName="senha"
-            placeholder="**************">
+            placeholder="******">
         </div>
 
         <div class="form-group confirma-senha-cadastro">
           <label for="exampleFormControlInput1">Confirme sua senha</label>
-          <input
-            type="password" class="form-control" id="confirmaSenha"
+          <input type="password" class="form-control" id="confirmaSenha"
             required
             formControlName="confirmaSenha"
-            placeholder="**************"
+            placeholder="******"
             formControlName="confirmaSenha">
         </div>
-        <button class="btn btn-primary" type="submit" [disabled]="!formularioCadastro.valid">Confirmar Cadastro</button>
-        <button class="btn btn-link" (click)="updateProfile()">Atualizar Cadastro</button>
+        <button class="btn btn-primary" type="button" (click)="criarUsuario()">Confirmar Cadastro</button>
+        <button class="btn btn-link" (click)="editaUsuario()">Atualizar Cadastro</button>
       </div>
     </div>
-  </form>
+  </form>-->
 
-  <ul>
-    <li *ngFor="let usuarios of (usuariosTodos$ | async)">{{ usuarios.tfqtlvB0F60u7KPHbmTY }}</li>
+  <div class="cadastroProfessor">
+    <div class="custom-file" class="profile-cadastro">
+      <img class="img-profile-cadastro" src="./../../assets/img/profile-image.gif">
+      <div class="selecionar-img">
+        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+      </div>
+    </div>
+
+    <div class="content-cadastro">
+      <div class="primeira-coluna">
+        <h1 class="info-pessoal">Informações pessoais</h1>
+        <div class="form-group nome-cadastro">
+          <label for="exampleFormControlInput1">Nome</label>
+          <input class="form-control" type="text" [(ngModel)]="primeiroNome" name="primeiroNome" placeholder="Primeiro Nome">
+        </div>
+
+        <div class="form-group sobrenome-cadastro">
+          <label for="exampleFormControlInput1">Sobrenome</label>
+          <input class="form-control" type="text" [(ngModel)]="ultimoNome" name="ultimoNome" placeholder="Último Nome">
+        </div>
+
+        <div class="form-group dt-nascimento-cadastro">
+          <label for="exampleFormControlInput1">Data de Nascimento</label>
+            <input class="form-control" type="text" [(ngModel)]="dtNascimento" name="dtNascimento" placeholder="dia/mês/ano">
+        </div>
+
+        <div class="form-group cargo-cadastro">
+          <label for="exampleFormControlInput1">Cargo (Professou ou Aluno</label>
+          <input class="form-control" type="text" [(ngModel)]="cargo" name="cargo" placeholder="Cargo: Professor ou Aluno">
+        </div>
+
+        <div class="form-group escola-cadastro">
+          <label for="exampleFormControlInput1">Escola</label>
+          <input class="form-control" type="text" [(ngModel)]="nomeEscola" name="nomeEscola" placeholder="Nome da Escola">
+        </div>
+      </div>
+
+      <div class="linha-vertical"></div>
+
+      <div class="segunda-coluna">
+        <h1 class="info-conta">Informações da conta</h1>
+        <div class="form-group email-cadastro">
+          <label for="exampleFormControlInput1">Email</label>
+          <input class="form-control" type="text" [(ngModel)]="email" name="email" placeholder="Email">
+        </div>
+
+        <div class="form-group senha-cadastro">
+          <label for="exampleFormControlInput1">Senha</label>
+          <input class="form-control" type="text" [(ngModel)]="senha" name="senha" placeholder="Senha">
+        </div>
+
+        <div class="form-group confirma-senha-cadastro">
+          <label for="exampleFormControlInput1">Confirme sua senha</label>
+          <input class="form-control" type="text" [(ngModel)]="confirmaSenha" name="confirmaSenha" placeholder="Confirma Senha">
+        </div>
+        <input class="btn btn-primary" type="submit" value="Cadastrar Usuário" (click)="criarUsuario()">
+        <button class="btn btn-link" (click)="editaUsuario()">Atualizar Cadastro</button>
+      </div>
+    </div>
+  </div>
+
+  <ul *ngFor="let usuario of usuarios | async">
+    <li>
+      <p>{{ usuario.primeiroNome }}</p>
+      <p>{{ usuario.ultimoNome }}</p>
+      <p>{{ usuario.cargo }}</p>
+      <p>{{ usuario.dtNascimento }}</p>
+      <p>{{ usuario.nomeEscola }}</p>
+      <p>{{ usuario.email }}</p>
+      <p>{{ usuario.senha }}</p>
+      <p>{{ usuario.confirmaSenha }}</p>
+    </li>
   </ul>
 </section>
