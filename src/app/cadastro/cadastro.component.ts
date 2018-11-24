@@ -17,7 +17,6 @@ export class CadastroComponent implements OnInit {
 
   primeiroNome: string;
   ultimoNome: string;
-  // cargo: ECargo;
   cargo: string;
   nomeEscola: string;
   dtNascimento: string;
@@ -32,11 +31,11 @@ export class CadastroComponent implements OnInit {
   usuarios$: Observable<Usuario[]>;
 
   constructor(private db: AngularFirestore, private router: Router) {
-    this.contasUsuarios = db.collection<IUsuario>('users');
+    /*this.contasUsuarios = db.collection<IUsuario>('users');
     this.usuarioCollectionRef = this.db.collection<IUsuario>('users');
     this.usuarios = this.usuarioCollectionRef.valueChanges();
 
-    /*this.db.doc<IUsuario>('/users/jessica@gmail.com').get().subscribe(res => {
+    this.db.doc<IUsuario>('/users/jessica@gmail.com').get().subscribe(res => {
 
     });*/
   }

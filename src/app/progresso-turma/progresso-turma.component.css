@@ -1,0 +1,24 @@
+#progresso-turmas .menu-progresso-turma {
+    padding: 15px 0px;
+}
+
+#progresso-turmas .menu-progresso-turma .container,
+#progresso-turmas .turma-nivel-escolar {
+    display: flex;
+    justify-content: space-between;
+}
+
+#progresso-turmas span.strong {
+    font-weight: bold;
+}
+
+.menu-progresso-turma .btn-cadastrar-turmas i {
+    margin-right: 8px;
+    font-size: 30px;
+    position: relative;
+    top: 5px;
+}
+
+.menu-progresso-turma .btn-cadastrar-turmas a {
+    font-size: 20px !important;
+}
