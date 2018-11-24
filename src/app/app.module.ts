@@ -10,7 +10,6 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { AuthService } from 'src/auth.service';
 import { SairComponent } from './sair/sair.component';
-import { MenuProfessorComponent } from './menu-professor/menu-professor.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { MenuComponent } from './menu/menu.component';
 import { ProgressoTurmaComponent } from './progresso-turma/progresso-turma.component';
@@ -27,12 +26,12 @@ import { LoginComponent } from './login/login.component';
 import { FormGroup, FormControl, ReactiveFormsModule, Validators, FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostsComponent } from './posts/posts.component';
+import { CadastroTurmasComponent } from './cadastro-turmas/cadastro-turmas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SairComponent,
-    MenuProfessorComponent,
     CadastroComponent,
     MenuComponent,
     ProgressoTurmaComponent,
@@ -46,7 +45,8 @@ import { PostsComponent } from './posts/posts.component';
     PerfilComponent,
     ResolverQuestoesComponent,
     LoginComponent,
-    PostsComponent
+    PostsComponent,
+    CadastroTurmasComponent
   ],
   imports: [
     BrowserModule,
