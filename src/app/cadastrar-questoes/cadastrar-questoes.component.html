@@ -1,0 +1,54 @@
+<section>
+  <!-- breadcrumb -->
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Progresso Turmas</li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="cadastro-questoes">
+      <div class="form-group">
+          <label for="exampleInputEmail1">Nível</label>
+          <select id="inputState" class="form-control">
+            <option selected>Selecione...</option>
+            <option value="Iniciante">Iniciante</option>
+            <option value="Intermediário">Intermediário</option>
+            <option value="Difícil">Difícil</option>
+            <option value="Desafio">Desafio</option>
+          </select>
+          <small id="emailHelp" class="form-text text-muted">Selecione o nível da questão a ser cadastrada.</small>
+      </div>
+      <div class="form-group">
+        <label for="pergunta">Pergunta</label>
+        <input type="text" class="form-control" id="pergunta" placeholder="How are you?">
+      </div>
+      <div class="form-group">
+        <label for="pergunta">Tradução</label>
+        <input type="text" class="form-control" id="pergunta" placeholder="Como você está?">
+        <small id="emailHelp" class="form-text text-muted">A traduação é a resposta que o aluno deve inserir no campo de resposta.</small>
+      </div>
+      <div class="btn-nova-questao">
+        <a href="#"><i class="fas fa-plus-circle"></i>Adicionar nova questão</a>
+      </div>
+      <div class="text-right">
+        <button type="button" class="btn btn-success">Salvar Questões</button>
+      </div>
+    </div>
+    <hr>
+    <div class="btns-cadastro-questoes row justify-content-end">
+      <div class="col-2 text-right">
+        <button type="button" class="btn btn-outline-info">Progresso Turmas</button>
+      </div>
+      <div class="col-2 text-right">
+        <button type="button" class="btn btn-outline-success">Cadastrar Aluno</button>
+      </div>
+      <div class="col-2 text-right">
+        <button type="button" class="btn btn-outline-warning">Questões</button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -8,6 +8,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { ProgressoTurmaComponent } from './progresso-turma/progresso-turma.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroTurmasComponent } from './cadastro-turmas/cadastro-turmas.component';
+import { CadastrarQuestoesComponent } from './cadastrar-questoes/cadastrar-questoes.component';
 
 export const routes: Routes = [
   { path: 'perfil', component: PerfilComponent },
@@ -18,7 +19,8 @@ export const routes: Routes = [
   { path: 'niveis', component: NiveisQuestoesComponent },
   { path: 'login', component: LoginComponent },
   { path: 'posts', component: PostsComponent },
-  { path: 'cadastro-turmas', component: CadastroTurmasComponent }
+  { path: 'cadastro-turmas', component: CadastroTurmasComponent },
+  { path: 'cadastrar-questoes', component: CadastrarQuestoesComponent }
 ];
 
 @NgModule({

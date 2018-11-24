@@ -22,6 +22,8 @@ import { FormGroup, FormControl, ReactiveFormsModule, Validators, FormsModule } 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostsComponent } from './posts/posts.component';
 import { CadastroTurmasComponent } from './cadastro-turmas/cadastro-turmas.component';
+import { CadastrarQuestoesComponent } from './cadastrar-questoes/cadastrar-questoes.component';
+import { VisualizarQuestoesComponent } from './visualizar-questoes/visualizar-questoes.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { CadastroTurmasComponent } from './cadastro-turmas/cadastro-turmas.compo
     LoginComponent,
     PostsComponent,
     CadastroTurmasComponent,
-    NiveisQuestoesComponent
+    NiveisQuestoesComponent,
+    CadastrarQuestoesComponent,
+    VisualizarQuestoesComponent
   ],
   imports: [
     BrowserModule,
