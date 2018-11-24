@@ -1,3 +1,100 @@
-<p>
-  cadastro-turmas works!
-</p>
+<section>
+  <header class="menu-progresso-turma">
+    <div class="container">
+      <div class="btn-cadastrar-turmas">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>Hey, professor(a)!</strong> Se você já cadastrou a turma, procure por ela <a href="#" class="alert-link">aqui</a> :)
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- breadcrumb -->
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Novas Turmas</li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Escola</label>
+          <select id="inputState" class="form-control">
+            <option selected>Selecione...</option>
+            <option value="IFSP Catanduva">IFSP Catanduva</option>
+            <option value="ETEC Elias Nechar">ETEC Elias Nechar</option>
+            <option value="Colegião">Colegião</option>
+            <option value="Ressureição">Ressureição</option>
+          </select>
+          <small id="emailHelp" class="form-text text-muted">Selecione a escola que os alunos estão matriculados.</small>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Ano/Série</label>
+          <select id="inputState" class="form-control">
+            <option selected>Selecione...</option>
+            <option value="1º ano">1º ano</option>
+            <option value="2º ano">2º ano</option>
+            <option value="3º ano">3º ano</option>
+            <option value="4º ano">4º ano</option>
+            <option value="5º ano">5º ano</option>
+            <option value="6º ano">6º ano</option>
+            <option value="7º ano">7º ano</option>
+            <option value="8º ano">8º ano</option>
+            <option value="9º ano">9º ano</option>
+          </select>
+          <small id="emailHelp" class="form-text text-muted">Selecione o ano que os alunos estão e em seguida o nível educacional.</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Nível Educacional</label>
+            <select id="inputState" class="form-control">
+              <option selected>Selecione...</option>
+              <option value="Ensino Fundamental I">Ensino Fundamental I</option>
+              <option value="Ensino Fundamental II">Ensino Fundamental II</option>
+              <option value="Ensino Médio">Ensino Médio</option>
+            </select>
+            <small id="emailHelp" class="form-text text-muted">Selecione o nível educacional.</small>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Identificador da Turma</label>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">@</div>
+            </div>
+            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="UserNameTurma">
+          </div>      
+          <small id="emailHelp" class="form-text text-muted">Este identificador é único para cada turma.</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Observações</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <small id="emailHelp" class="form-text text-muted">Coloque aqui as observações sobre cada turma.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

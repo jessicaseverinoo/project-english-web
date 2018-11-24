@@ -1,9 +1,3 @@
-#pg-cadastro {
-    width: calc(100% - 250px);
-    position: relative;
-    float: right;
-}
-
 .pg-login-usuario {
     position: absolute;
     right: 25px;

@@ -2,12 +2,6 @@ span.strong {
     font-weight: bold;
 }
 
-#pg-cadastro {
-    width: calc(100% - 250px);
-    position: relative;
-    float: right;
-}
-
 .pg-login-usuario {
     width: 80%;
     display: flex;
