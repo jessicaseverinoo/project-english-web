@@ -29,7 +29,8 @@ export const routes: Routes = [
   { path: 'ver-turmas', component: VisualizarTurmasComponent },
   { path: 'exercicios-turmas', component: AtribuirExerciciosTurmasComponent },
   { path: 'cadastrar-turmas', component: CadastroTurmasComponent },
-  { path: 'perfil-turma', component: PerfilTurmaComponent }
+  { path: 'perfil-turma', component: PerfilTurmaComponent },
+  { path: 'resolver-questoes', component: ResolverQuestoesComponent }
 
 ];
 

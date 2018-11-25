@@ -28,6 +28,7 @@ import { BtnQuestoesBottomComponent } from './btn-questoes-bottom/btn-questoes-b
 import { VisualizarTurmasComponent } from './visualizar-turmas/visualizar-turmas.component';
 import { AtribuirExerciciosTurmasComponent } from './atribuir-exercicios-turmas/atribuir-exercicios-turmas.component';
 import { PerfilTurmaComponent } from './perfil-turma/perfil-turma.component';
+import { ExerciciosRespondidosSucessoComponent } from './exercicios-respondidos-sucesso/exercicios-respondidos-sucesso.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { PerfilTurmaComponent } from './perfil-turma/perfil-turma.component';
     BtnQuestoesBottomComponent,
     VisualizarTurmasComponent,
     AtribuirExerciciosTurmasComponent,
-    PerfilTurmaComponent
+    PerfilTurmaComponent,
+    ExerciciosRespondidosSucessoComponent
   ],
   imports: [
     BrowserModule,

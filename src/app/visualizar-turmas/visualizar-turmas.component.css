@@ -1,3 +1,7 @@
 span.strong {
     font-weight: bold;
 }
+
+[type="button"] {
+    width: 100%;
+}

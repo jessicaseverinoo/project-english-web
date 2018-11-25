@@ -1,15 +1,10 @@
 <!-- The content below is only a placeholder and can be replaced.
 <h1 *ngIf='authService.user | async'>Welcome {{ (authService.user | async)?.email }}!</h1>
 
-<div>
-    <app-cadastro></app-cadastro>
-</div>
-
 <button (click)='logout()' *ngIf='authService.user | async'>
   Logout
 </button> -->
 
 <app-menu></app-menu>
-<app-resolver-questoes></app-resolver-questoes>
 
 <router-outlet></router-outlet>

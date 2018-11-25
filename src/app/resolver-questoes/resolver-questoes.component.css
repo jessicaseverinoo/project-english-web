@@ -1,0 +1,8 @@
+span.strong {
+    font-weight: bold;
+}
+
+.btn-avancar {
+    display: flex;
+    width: 100%;
+}
