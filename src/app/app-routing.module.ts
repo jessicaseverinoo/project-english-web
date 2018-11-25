@@ -13,6 +13,7 @@ import { VisualizarQuestoesComponent } from './visualizar-questoes/visualizar-qu
 import { VisualizarTurmasComponent } from './visualizar-turmas/visualizar-turmas.component';
 import { AtribuirExerciciosTurmasComponent } from './atribuir-exercicios-turmas/atribuir-exercicios-turmas.component';
 import { PerfilTurmaComponent } from './perfil-turma/perfil-turma.component';
+import { ExerciciosRespondidosSucessoComponent } from './exercicios-respondidos-sucesso/exercicios-respondidos-sucesso.component';
 
 export const routes: Routes = [
   { path: 'perfil', component: PerfilComponent },
@@ -30,7 +31,8 @@ export const routes: Routes = [
   { path: 'exercicios-turmas', component: AtribuirExerciciosTurmasComponent },
   { path: 'cadastrar-turmas', component: CadastroTurmasComponent },
   { path: 'perfil-turma', component: PerfilTurmaComponent },
-  { path: 'resolver-questoes', component: ResolverQuestoesComponent }
+  { path: 'resolver-questoes', component: ResolverQuestoesComponent },
+  { path: 'sucesso', component: ExerciciosRespondidosSucessoComponent }
 
 ];
 

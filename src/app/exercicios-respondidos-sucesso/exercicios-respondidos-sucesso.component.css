@@ -1,0 +1,30 @@
+#respondido-sucesso {
+    color: #ffffff;
+    font-size: 55px;
+    height: 100%;
+    max-height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#respondido-sucesso .bg {
+    width: 400px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 30px 25px 80px;
+    justify-content: center;
+    background: #008000;
+}
+
+#respondido-sucesso i {
+    position: absolute;
+}
+
+#respondido-sucesso .text {
+    font-size: 30px;
+    position: relative;
+    top: 55px;
+}
