@@ -23,6 +23,19 @@ a, a:hover, a:focus {
     transition: all 0.3s;
 }
 
+span.strong {
+    font-weight: bold;
+}
+
+span.eniw {
+    color: #ffc107;
+}
+
+i.fab.fa-earlybirds.logo {
+    font-size: 85px;
+    color: darkslateblue;
+}
+
 #sidebar {
     /* don't forget to add all the previously mentioned styles here too */
     background: #7386D5;

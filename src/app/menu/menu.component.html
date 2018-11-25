@@ -2,15 +2,16 @@
   <!-- Sidebar -->
   <nav id="sidebar">
     <div class="sidebar-header text-center">
-      <img src="../../assets/global.png" alt="Usuário" class="rounded-circle w-50">
+      <!--<img src="../../assets/global.png" alt="Usuário" class="rounded-circle w-50">-->
+      <div class="logo-menu">
+          <i class="fab fa-earlybirds logo"></i>
+          <div><span class="eniw">eniw.</span>english<span class="strong">online</span></div>
+      </div>
     </div>
 
     <ul class="list-unstyled components text-center">
       <li>
         <a routerLink="perfil">Perfil</a>
-      </li>
-      <li>
-        <a routerLink="cadastro-turmas">Nova Turma</a>
       </li>
       <li>
         <a routerLink="cadastro">Cadastrar Aluno</a>
@@ -22,10 +23,25 @@
         <a routerLink="progresso">Progresso Turmas</a>
       </li>
       <li>
+        <a routerLink="cadastrar-turmas">Cadastrar Turmas</a>
+      </li>
+      <li>
+        <a routerLink="ver-turmas">Ver Turmas</a>
+      </li>
+      <li>
+        <a routerLink="exercicios-turmas">Exercícios Turmas</a>
+      </li>
+      <li>
+        <a routerLink="perfil-turma">Perfil Turma</a>
+      </li>
+      <li>
         <a routerLink="niveis">Níveis Questões</a>
       </li>
       <li>
         <a routerLink="cadastrar-questoes">Cadastrar Questões</a>
+      </li>
+      <li>
+        <a routerLink="visualizar-questoes">Visualizar Questões</a>
       </li>
       <li>
         <a (click)="logout()">Sair</a>

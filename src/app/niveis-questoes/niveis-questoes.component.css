@@ -1,0 +1,41 @@
+#niveis-questoes .m-5 {
+    margin: 15px !important;
+}
+
+#niveis-questoes .card-body {
+    background-color: #fbfbfb;
+}
+
+#niveis-questoes .card-title {
+    font-weight: normal;
+}
+
+.info-nivel {
+    display: flex;
+    align-items: center;
+}
+
+.info-nivel i {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    background-color: #ffc107;
+    color: #fff;
+    height: 100px;
+    align-items: center;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.info-nivel p.card-text {
+    background-color: #ffdf7f;
+    color: #5d5d5d;
+    font-weight: 100;
+    padding: 10px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.btn > i {
+    margin-right: 8px;
+}

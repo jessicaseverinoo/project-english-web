@@ -9,6 +9,10 @@ import { ProgressoTurmaComponent } from './progresso-turma/progresso-turma.compo
 import { LoginComponent } from './login/login.component';
 import { CadastroTurmasComponent } from './cadastro-turmas/cadastro-turmas.component';
 import { CadastrarQuestoesComponent } from './cadastrar-questoes/cadastrar-questoes.component';
+import { VisualizarQuestoesComponent } from './visualizar-questoes/visualizar-questoes.component';
+import { VisualizarTurmasComponent } from './visualizar-turmas/visualizar-turmas.component';
+import { AtribuirExerciciosTurmasComponent } from './atribuir-exercicios-turmas/atribuir-exercicios-turmas.component';
+import { PerfilTurmaComponent } from './perfil-turma/perfil-turma.component';
 
 export const routes: Routes = [
   { path: 'perfil', component: PerfilComponent },
@@ -20,7 +24,13 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'posts', component: PostsComponent },
   { path: 'cadastro-turmas', component: CadastroTurmasComponent },
-  { path: 'cadastrar-questoes', component: CadastrarQuestoesComponent }
+  { path: 'cadastrar-questoes', component: CadastrarQuestoesComponent },
+  { path: 'visualizar-questoes', component: VisualizarQuestoesComponent },
+  { path: 'ver-turmas', component: VisualizarTurmasComponent },
+  { path: 'exercicios-turmas', component: AtribuirExerciciosTurmasComponent },
+  { path: 'cadastrar-turmas', component: CadastroTurmasComponent },
+  { path: 'perfil-turma', component: PerfilTurmaComponent }
+
 ];
 
 @NgModule({

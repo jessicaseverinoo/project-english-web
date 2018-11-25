@@ -1,81 +1,110 @@
-<div class="content niveis-questoes">
-
-  <div class="row">
-
-    <div class="col-md-6">
-      <div class="card m-5">
-        <div class="card-body">
-          <h5 class="card-title text-center">Nível: Iniciante</h5>
-          <div class="row text-center">
-            <div class="col-md-6">
-              <button class="btn btn-info">Inserir Questão</button>
-            </div>
-            <div class="col-md-6">
-              <button class="btn btn-info">Ver Questões</button>
-            </div>
-          </div>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div class="card m-5">
-        <div class="card-body">
-          <h5 class="card-title text-center">Nível: Intermediário</h5>
-          <div class="row text-center">
-            <div class="col-md-6">
-              <button class="btn btn-info">Inserir Questão</button>
-            </div>
-            <div class="col-md-6">
-              <button class="btn btn-info">Ver Questões</button>
-            </div>
-          </div>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div class="card m-5">
-        <div class="card-body">
-          <h5 class="card-title text-center">Nível: Difícil</h5>
-          <div class="row text-center">
-            <div class="col-md-6">
-              <button class="btn btn-info"><i class="fas fa-plus"></i></button>
-              <span>Inserir Questão</span>
-            </div>
-            <div class="col-md-6">
-              <button class="btn btn-info"><i class="fas fa-eye"></i></button>
-              <span>Ver Questões</span>
-            </div>
-          </div>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div class="card m-5">
-        <div class="card-body">
-          <h5 class="card-title text-center">Nível: Desafio</h5>
-          <div class="row text-center">
-            <div class="col-md-6">
-              <button class="btn btn-info">Inserir Questão</button>
-            </div>
-            <div class="col-md-6">
-              <button class="btn btn-info">Ver Questões</button>
-            </div>
-          </div>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-        </div>
-      </div>
-    </div>
-
+<section id="niveis-questoes">
+  <!-- breadcrumb -->
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Níveis Questões</li>
+      </ol>
+    </nav>
   </div>
 
-</div>
+  <div class="content ">
+    <div class="row">
+
+      <div class="col-md-6">
+        <div class="card m-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Nível: Iniciante</h5>
+            <div class="row text-center">
+              <div class="col-md-6">
+                <a routerLink="cadastrar-questoes" class="btn btn-success"><i class="fas fa-plus"></i>Inserir Questão</a>
+              </div>
+              <div class="col-md-6">
+                <a routerLink="visualizar-questoes" class="btn btn-info"><i class="fas fa-eye"></i>Ver Questões</a>
+              </div>
+            </div>
+            <hr>
+            <div class="info-nivel">
+                <i class="fas fa-info"></i>
+                <p class="card-text">
+                  O nível iniciante contém questões para alunos que estão tendo o primeiro contato com a língua inglesa.
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card m-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Nível: Intermediário</h5>
+            <div class="row text-center">
+              <div class="col-md-6">
+                <a routerLink="cadastrar-questoes" class="btn btn-success"><i class="fas fa-plus"></i>Inserir Questão</a>
+              </div>
+              <div class="col-md-6">
+                <a routerLink="visualizar-questoes" class="btn btn-info"><i class="fas fa-eye"></i>Ver Questões</a>
+              </div>
+            </div>
+            <hr>
+            <div class="info-nivel">
+              <i class="fas fa-info"></i>
+              <p class="card-text">
+                O nível intermediário contém questões para alunos que possuem uma familiaridade com a língua inglesa.
+              </p>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card m-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Nível: Difícil</h5>
+            <div class="row text-center">
+              <div class="col-md-6">
+                <a routerLink="cadastrar-questoes" class="btn btn-success"><i class="fas fa-plus"></i>Inserir Questão</a>
+              </div>
+              <div class="col-md-6">
+                  <a routerLink="visualizar-questoes" class="btn btn-info"><i class="fas fa-eye"></i>Ver Questões</a>
+              </div>
+            </div>
+            <hr>
+            <div class="info-nivel">
+              <i class="fas fa-info"></i>
+              <p class="card-text">
+                O nível difícil contém questões para alunos que possuem um conhecimento avançado da língua inglesa.
+              </p>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card m-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Nível: Desafio</h5>
+            <div class="row text-center">
+              <div class="col-md-6">
+                <a routerLink="cadastrar-questoes" class="btn btn-success"><i class="fas fa-plus"></i>Inserir Questão</a>
+              </div>
+              <div class="col-md-6">
+                <a routerLink="visualizar-questoes" class="btn btn-info"><i class="fas fa-eye"></i>Ver Questões</a>
+              </div>
+            </div>
+            <hr>
+            <div class="info-nivel">
+              <i class="fas fa-info"></i>
+              <p class="card-text">
+                O nível desafio contém questões para resoluções fora da sala de aula e que desafiem alunos a buscarem conhecimentos
+                extracurriculares.
+              </p>
+          </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
