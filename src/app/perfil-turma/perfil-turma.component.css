@@ -1,0 +1,12 @@
+span.strong {
+    font-weight: bold;
+}
+
+.collapse ul {
+    padding: 0px;
+}
+
+.collapse li {
+    list-style: none;
+    margin: 5px 0px;
+}
