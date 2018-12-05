@@ -5,6 +5,16 @@
   Logout
 </button> -->
 
-<app-menu></app-menu>
+<!-- <app-login></app-login> -->
 
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+</head>
+
+<div *ngIf="login">
+  <app-login></app-login>
+</div>
+
+<app-menu></app-menu>

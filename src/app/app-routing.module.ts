@@ -14,9 +14,11 @@ import { VisualizarTurmasComponent } from './visualizar-turmas/visualizar-turmas
 import { AtribuirExerciciosTurmasComponent } from './atribuir-exercicios-turmas/atribuir-exercicios-turmas.component';
 import { PerfilTurmaComponent } from './perfil-turma/perfil-turma.component';
 import { ExerciciosRespondidosSucessoComponent } from './exercicios-respondidos-sucesso/exercicios-respondidos-sucesso.component';
+import { MenuComponent } from './menu/menu.component';
 
 export const routes: Routes = [
-  { path: 'perfil', component: PerfilComponent },
+  { path: 'index', component: MenuComponent },
+  { path: 'index/perfil', component: PerfilComponent },
   { path: 'cadastro', component: CadastroComponent },
   { path: 'alunos', component: CadastroComponent },
   { path: 'progresso', component: ProgressoTurmaComponent },

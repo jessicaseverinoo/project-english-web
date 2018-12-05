@@ -1,1 +1,9 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
+body {
+    font-family: 'Varela Round', sans-serif;
+}
+
+a {
+    color: #4998d8;
+}

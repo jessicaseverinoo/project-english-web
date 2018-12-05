@@ -1,11 +1,16 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+</head>
+
 <div class="wrapper col-md-12 float-left p-0">
   <!-- Sidebar -->
   <nav id="sidebar">
     <div class="sidebar-header text-center">
       <!--<img src="../../assets/global.png" alt="Usuário" class="rounded-circle w-50">-->
       <div class="logo-menu">
-          <i class="fab fa-earlybirds logo"></i>
-          <div><span class="eniw">eniw.</span>english<span class="strong">online</span></div>
+        <i class="fab fa-earlybirds logo"></i>
+        <div><span class="eniw">eniw.</span>english<span class>online</span></div>
       </div>
     </div>
 
@@ -13,37 +18,37 @@
       <li>
         <a routerLink="perfil">Perfil</a>
       </li>
-      <li>
+      <li *ngIf="permissao">
         <a routerLink="cadastro">Cadastrar Aluno</a>
       </li>
-      <li>
+      <!-- <li *ngIf="permissao">
         <a routerLink="cadastro">Cadastrar Professor</a>
-      </li>
-      <li>
+      </li> -->
+      <li *ngIf="permissao">
         <a routerLink="progresso">Progresso Turmas</a>
       </li>
-      <li>
+      <li *ngIf="permissao">
         <a routerLink="cadastrar-turmas">Cadastrar Turmas</a>
       </li>
-      <li>
+      <li *ngIf="permissao">
         <a routerLink="ver-turmas">Ver Turmas</a>
       </li>
-      <li>
+      <!-- <li *ngIf="permissao">
         <a routerLink="exercicios-turmas">Exercícios Turmas</a>
-      </li>
-      <li>
+      </li> -->
+      <li *ngIf="!permissao">
         <a routerLink="perfil-turma">Perfil Turma</a>
       </li>
       <li>
         <a routerLink="niveis">Níveis Questões</a>
       </li>
-      <li>
+      <li *ngIf="permissao">
         <a routerLink="cadastrar-questoes">Cadastrar Questões</a>
       </li>
       <li>
         <a routerLink="visualizar-questoes">Visualizar Questões</a>
       </li>
-      <li>
+      <li *ngIf="!permissao">
         <a routerLink="resolver-questoes">Resolver Questões</a>
       </li>
       <li>

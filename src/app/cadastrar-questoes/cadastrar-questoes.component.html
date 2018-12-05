@@ -2,7 +2,7 @@
   <!-- breadcrumb -->
   <div class="container">
     <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
+      <ol class="breadcrumb bg-light">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
         <li class="breadcrumb-item active" aria-current="page">Cadastrar Questões</li>
       </ol>
@@ -39,7 +39,7 @@
       </div>
 
       <div class="text-right">
-        <button type="button" class="btn btn-success">Salvar Questões</button>
+        <button type="button" (click)="salvarQuestoes()" class="btn btn-success">Salvar Questões</button>
       </div>
       <app-btn-questoes-bottom></app-btn-questoes-bottom>
     </div>

@@ -1,20 +1,16 @@
-/*
-    ADDITIONAL DEMO STYLE, NOT IMPORTANT TO MAKE THINGS WORK BUT TO MAKE IT A BIT NICER :)
-*/
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-
-
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Varela Round', sans-serif;
     background: #fafafa;
+    letter-spacing: .05rem;
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Varela Round', sans-serif;
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
     color: #999;
+    letter-spacing: .05rem;
 }
 
 a, a:hover, a:focus {
@@ -28,28 +24,24 @@ span.strong {
 }
 
 span.eniw {
-    color: #ffc107;
+    color: #4998d8;
 }
 
-i.fab.fa-earlybirds.logo {
+.logo {
     font-size: 85px;
-    color: darkslateblue;
+    color: #4998d8;
 }
 
 #sidebar {
     /* don't forget to add all the previously mentioned styles here too */
-    background: #7386D5;
+    background: #212529;
     color: #fff;
     transition: all 0.3s;
 }
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #6d7fcc;
-}
-
-#sidebar ul.components {
-    padding: 20px 0;
+    background: #1c2023;
 }
 
 #sidebar ul p {
@@ -58,13 +50,17 @@ i.fab.fa-earlybirds.logo {
 }
 
 #sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
+    padding: 5px 10px;
+    font-size: 1rem;
     display: block;
+    background-color: #666;
+    border-radius: 50px;
+    margin: 5% 5%;
 }
+
 #sidebar ul li a:hover {
-    color: #7386D5;
-    background: #fff;
+    color: #fafafa;
+    background: #1c2023;
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {

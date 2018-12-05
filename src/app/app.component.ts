@@ -7,6 +7,8 @@ import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { constructor } from 'q';
 import { auth } from 'firebase/app';
+import { UserAutorizationService } from './login/user-autorization.service';
+import { isNullOrUndefined } from 'util';
 
 @Component({
   selector: 'app-root',
@@ -15,24 +17,33 @@ import { auth } from 'firebase/app';
 })
 
 export class AppComponent {
-  email: string;
-  password: string;
+  public usuario: number = 0;
+  public login: boolean;
 
   constructor(
-    public authService: AuthService
-  ) {}
+    public authService: AuthService, private autorization: UserAutorizationService
+  ) { }
 
-  signup(email, password) {
-    this.authService.signup(email, password);
-    this.email = this.password = '';
+  ngOnInit() {
+    this.login = this.getUser();
   }
 
-  login(email, password) {
-    this.authService.login(email, password);
-    this.email = this.password = '';
-  }
+  // signup(email, password) {
+  //   this.authService.signup(email, password);
+  // }
 
-  logout() {
-    this.authService.logout();
+  // login(email, password) {
+  //   this.authService.login(email, password);
+  //   this.email = this.password = '';
+  // }
+
+  // logout() {
+  //   this.authService.logout();
+  // }
+
+  public getUser() {
+    // this.usuario = usuario;
+    if (isNullOrUndefined(this.autorization.getVariavel("tipo-usuario"))) return true;
+    return false;
   }
 }
