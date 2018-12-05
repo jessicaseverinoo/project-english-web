@@ -1,3 +1,4 @@
+import { CadastroAlunosComponent } from './cadastro-alunos/cadastro-alunos.component';
 import { PostsComponent } from './posts/posts.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -18,7 +19,7 @@ import { MenuComponent } from './menu/menu.component';
 
 export const routes: Routes = [
   { path: 'index', component: MenuComponent },
-  { path: 'index/perfil', component: PerfilComponent },
+  { path: 'perfil', component: PerfilComponent },
   { path: 'cadastro', component: CadastroComponent },
   { path: 'alunos', component: CadastroComponent },
   { path: 'progresso', component: ProgressoTurmaComponent },
@@ -34,7 +35,8 @@ export const routes: Routes = [
   { path: 'cadastrar-turmas', component: CadastroTurmasComponent },
   { path: 'perfil-turma', component: PerfilTurmaComponent },
   { path: 'resolver-questoes', component: ResolverQuestoesComponent },
-  { path: 'sucesso', component: ExerciciosRespondidosSucessoComponent }
+  { path: 'sucesso', component: ExerciciosRespondidosSucessoComponent },
+  { path: 'cadastro-aluno', component: CadastroAlunosComponent }
 
 ];
 

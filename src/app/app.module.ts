@@ -29,6 +29,7 @@ import { VisualizarTurmasComponent } from './visualizar-turmas/visualizar-turmas
 import { AtribuirExerciciosTurmasComponent } from './atribuir-exercicios-turmas/atribuir-exercicios-turmas.component';
 import { PerfilTurmaComponent } from './perfil-turma/perfil-turma.component';
 import { ExerciciosRespondidosSucessoComponent } from './exercicios-respondidos-sucesso/exercicios-respondidos-sucesso.component';
+import { CadastroAlunosComponent } from './cadastro-alunos/cadastro-alunos.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { ExerciciosRespondidosSucessoComponent } from './exercicios-respondidos-
     VisualizarTurmasComponent,
     AtribuirExerciciosTurmasComponent,
     PerfilTurmaComponent,
-    ExerciciosRespondidosSucessoComponent
+    ExerciciosRespondidosSucessoComponent,
+    CadastroAlunosComponent
   ],
   imports: [
     BrowserModule,

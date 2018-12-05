@@ -3,7 +3,7 @@
     <div class="container">
       <div class="btn-cadastrar-turmas">
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
-          <strong>Hey, professor(a)!</strong> Se você já cadastrou a turma, procure por ela <a href="#" class="alert-link">aqui</a> :)
+          <strong>Hey, professor(a)!</strong> Se você já cadastrou a turma, procure por ela <a href="/ver-turmas" class="alert-link">aqui</a> :)
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -27,21 +27,22 @@
       <div class="col">
         <div class="form-group">
           <label for="exampleInputEmail1">Escola</label>
-          <select id="inputState" class="form-control">
+          <!--<select id="inputState" class="form-control">
             <option selected>Selecione...</option>
             <option value="IFSP Catanduva">IFSP Catanduva</option>
             <option value="ETEC Elias Nechar">ETEC Elias Nechar</option>
             <option value="Colegião">Colegião</option>
             <option value="Ressureição">Ressureição</option>
-          </select>
-          <small id="emailHelp" class="form-text text-muted">Selecione a escola que os alunos estão matriculados.</small>
+          </select>-->
+          <input class="form-control" type="text" [(ngModel)]="nomeEscola" name="nomeEscola" placeholder="Nome da escola...">
+          <small id="emailHelp" class="form-text text-muted">Informe a escola que os alunos estão matriculados.</small>
         </div>
       </div>
 
       <div class="col">
         <div class="form-group">
           <label for="exampleInputEmail1">Ano/Série</label>
-          <select id="inputState" class="form-control">
+          <!--<select id="inputState" class="form-control">
             <option selected>Selecione...</option>
             <option value="1º ano">1º ano</option>
             <option value="2º ano">2º ano</option>
@@ -52,8 +53,9 @@
             <option value="7º ano">7º ano</option>
             <option value="8º ano">8º ano</option>
             <option value="9º ano">9º ano</option>
-          </select>
-          <small id="emailHelp" class="form-text text-muted">Selecione o ano que os alunos estão e em seguida o nível educacional.</small>
+          </select>-->
+          <input class="form-control" type="text" [(ngModel)]="ano" name="ano" placeholder="[1º ano, ..., 9º ano]">
+          <small id="ano" class="form-text text-muted">Informe o ano [1º ano, ..., 9º ano] que os alunos estão e em seguida o nível educacional.</small>
         </div>
       </div>
     </div>
@@ -62,13 +64,14 @@
       <div class="col">
         <div class="form-group">
             <label for="exampleInputEmail1">Nível Educacional</label>
-            <select id="inputState" class="form-control">
+            <!--<select id="inputState" class="form-control">
               <option selected>Selecione...</option>
               <option value="Ensino Fundamental I">Ensino Fundamental I</option>
               <option value="Ensino Fundamental II">Ensino Fundamental II</option>
               <option value="Ensino Médio">Ensino Médio</option>
-            </select>
-            <small id="emailHelp" class="form-text text-muted">Selecione o nível educacional.</small>
+            </select>-->
+            <input class="form-control" type="text" [(ngModel)]="nivelEducacional" name="nivelEducacional" placeholder="[Ensino Fundamental I, Ensino Fundamental II, Ensino Médio]">
+            <small id="ano" class="form-text text-muted">Informe o Nível Educacional [Ensino Fundamental I, Ensino Fundamental II, Ensino Médio].</small>
         </div>
       </div>
 
@@ -79,7 +82,7 @@
             <div class="input-group-prepend">
               <div class="input-group-text">@</div>
             </div>
-            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="UserNameTurma">
+            <input type="text" [(ngModel)]="identificadorTurma" class="form-control" id="inlineFormInputGroup" placeholder="UserNameTurma">
           </div>      
           <small id="emailHelp" class="form-text text-muted">Este identificador é único para cada turma.</small>
         </div>
@@ -90,8 +93,18 @@
       <div class="col-sm-12">
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Observações</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <textarea [(ngModel)]="observacoesTurma" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
           <small id="emailHelp" class="form-text text-muted">Coloque aqui as observações sobre cada turma.</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="form-group">
+          <div class="text-right">
+            <input class="btn btn-success" type="submit" value="Salvar Cadastro" (click)="cadastrarTurma()">
+          </div>
         </div>
       </div>
     </div>

@@ -1,11 +1,13 @@
 <section id="pg-cadastro">
+  <div class="pg-login-usuario">
+      <button type="button" class="btn btn-primary" (click)="login()">Já possui uma conta? Faça seu login aqui!</button>
+  </div>
+
   <div class="cadastroProfessor">
     <div class="custom-file" class="profile-cadastro">
       <img class="img-profile-cadastro" src="./../../assets/img/profile-image.gif">
-      <div class="infos-perfil">
-        <p><span class="strong">Nome: </span>Jessica Severino</p>
-        <p><span class="strong">Cargo: </span>Professora</p>
-        <p><span class="strong">Escola: </span>Instituto Federal de São Paulo - Campus Catanduva</p>
+      <div class="selecionar-img">
+        <input type="file" class="form-control-file" id="exampleFormControlFile1">
       </div>
     </div>
 
@@ -28,7 +30,7 @@
         </div>
 
         <div class="form-group cargo-cadastro">
-          <label for="exampleFormControlInput1">Cargo (Professor ou Aluno)</label>
+          <label for="exampleFormControlInput1">Cargo: Aluno</label>
           <input class="form-control" type="text" [(ngModel)]="cargo" name="cargo" placeholder="Cargo: Professor ou Aluno">
         </div>
 
@@ -56,8 +58,22 @@
           <label for="exampleFormControlInput1">Confirme sua senha</label>
           <input class="form-control" type="text" [(ngModel)]="confirmaSenha" name="confirmaSenha" placeholder="Confirma Senha">
         </div>
-        <input class="btn btn-primary" type="submit" value="Atualizar Cadastro" (click)="editaUsuario()">
+        <input class="btn btn-primary" type="submit" value="Cadastrar Usuário" (click)="criarAluno()">
+        <button class="btn btn-link" (click)="editaUsuario()">Atualizar Cadastro</button>
       </div>
     </div>
   </div>
+
+  <ul *ngFor="let usuario of usuarios | async">
+    <li>
+      <p>{{ usuario.primeiroNome }}</p>
+      <p>{{ usuario.ultimoNome }}</p>
+      <p>{{ usuario.cargo }}</p>
+      <p>{{ usuario.dtNascimento }}</p>
+      <p>{{ usuario.nomeEscola }}</p>
+      <p>{{ usuario.email }}</p>
+      <p>{{ usuario.senha }}</p>
+      <p>{{ usuario.confirmaSenha }}</p>
+    </li>
+  </ul>
 </section>
