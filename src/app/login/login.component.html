@@ -2,38 +2,46 @@
 <h1 style="text-align: center" *ngIf='authService.user | async'>Olá {{ (authService.user | async)?.email }}!</h1>
 
 <section id="login" class="col-md-6">
-  <div class="text-center">
+  <!-- <div class="text-center">
     <img class="img img-responsive center" src="../../assets/img/logo.png">
+  </div> -->
+  <div class="col-lg-12 text-center p-5">
+    <i class="fab fa-earlybirds logo"></i>
+    <div><span class="eniw">eniw.</span>english<span class="strong">online</span></div>
   </div>
-  <div class="content-login col-md-auto justify-content-md-center" *ngIf='!(authService.user | async)'>
-    <div class="form-group">
-      <input class="ipt-email form-control" type='email' #email ngModel='email' placeholder='email'>
-    </div>
-    <div class="form-group">
-      <input class="ipt-senha form-control" type='password' #password ngModel='password' placeholder='senha'>
-    </div>
-    <div id="rd-login">
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ProfessorLogin" value="Professor">
-        <label class="form-check-label" for="ProfessorLogin">Professor</label>
+  <form [formGroup]="loginFormulario">
+    <div class="content-login col-md-auto justify-content-md-center" *ngIf='!(authService.user | async)'>
+      <div class="form-group">
+        <input class="ipt-email form-control" formControlName="email" type='email' #email placeholder='Digite seu email'>
       </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="Aluno" id="AlunoLogin" value="Aluno">
-        <label class="form-check-label" for="AlunoLogin">Aluno</label>
+      <div class="form-group">
+        <input class="ipt-senha form-control" formControlName="senha" type='password' #password placeholder='Digite sua senha'>
+      </div>
+      <div id="rd-login">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" formControlName="tipoUsuario" type="radio" ngModel="inlineRadioOptions" id="ProfessorLogin"
+            value="0">
+          <label class="form-check-label" for="ProfessorLogin">Professor</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" formControlName="tipoUsuario" type="radio" ngModel="inlineRadioOptions" id="AlunoLogin"
+            value="1">
+          <label class="form-check-label" for="AlunoLogin">Aluno</label>
+        </div>
+        <div>
+        </div>
+        <button class="btn btn-primary btn-lg btn-block" (click)='login(email.value, password.value)' [disabled]='!email || !password'>
+          Login
+        </button>
       </div>
       <div>
-    </div>
-      <button class="btn btn-primary btn-lg btn-block" (click)='login(email.value, password.value)' [disabled]='!email || !password'>
-        Login
-      </button>
-    </div>
-    <div>
         <a id="cadastro-professor" routerLink="cadastro">Professor, ainda não tem cadastro? Faça aqui!</a>
-      <!--<button class="btn-criar-usuario btn btn-outline-secondary" (click)='signup(email.value, password.value)'>
+        <!--<button class="btn-criar-usuario btn btn-outline-secondary" (click)='signup(email.value, password.value)'>
         Cadastrar
       </button>-->
+      </div>
     </div>
-  </div>
+  </form>
   <!--<button class="btn-sair" (click)='logout()' *ngIf='authService.user | async'>Sair</button>-->
   <app-sair></app-sair>
 </section>

@@ -20,3 +20,13 @@
     margin: 15px auto 0px;
     display: block;
 }
+
+span.eniw {
+    color: #ffc107;
+}
+
+
+i.fab.fa-earlybirds.logo {
+    font-size: 85px;
+    color: darkslateblue;
+}
