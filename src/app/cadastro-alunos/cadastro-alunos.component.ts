@@ -54,48 +54,6 @@ export class CadastroAlunosComponent implements OnInit {
     'confirmaSenha': this.confirmaSenha});
   }
 
-  editaAluno (aluno: IAlunos) {
-    this.db.doc<IAlunos>(`/alunos/${aluno.email}`).get().subscribe(res => {
-      if (!res.exists) {
-        alert('O usuário não existe! Verifique.');
-      } else {
-        console.log('carregando...');
-        this.db.doc<IAlunos>(`/alunos/${aluno.email}`)
-            .set(aluno)
-            .then(() => {
-              console.log('sucesso >>>', res);
-            })
-            .catch((err) => {
-              console.log('erro >>> ', err);
-            })
-            .finally(() => {
-              console.log('carregou');
-            });
-      }
-    });
-  }
-
-  deletaAluno (aluno: IAlunos) {
-    this.db.doc<IAlunos>(`/alunos/${aluno.email}`).get().subscribe(res => {
-      if (!res.exists) {
-        alert('O usuário não existe! Verifique.');
-      } else {
-        console.log('carregando...');
-        this.db.doc<IAlunos>(`/alunos/${aluno.email}`)
-            .delete()
-            .then(() => {
-              console.log('sucesso >>>', res);
-            })
-            .catch((err) => {
-              console.log('erro >>> ', err);
-            })
-            .finally(() => {
-              console.log('carregou');
-            });
-      }
-    });
-  }
-
   ngOnInit(): void {
     this.alunoCollectionRef = this.db.collection('alunos');
     this.alunos = this.alunoCollectionRef.valueChanges();

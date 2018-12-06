@@ -64,16 +64,16 @@
     </div>
   </div>
 
-  <ul *ngFor="let usuario of usuarios | async">
+  <ul *ngFor="let aluno of alunos | async">
     <li>
-      <p>{{ usuario.primeiroNome }}</p>
-      <p>{{ usuario.ultimoNome }}</p>
-      <p>{{ usuario.cargo }}</p>
-      <p>{{ usuario.dtNascimento }}</p>
-      <p>{{ usuario.nomeEscola }}</p>
-      <p>{{ usuario.email }}</p>
-      <p>{{ usuario.senha }}</p>
-      <p>{{ usuario.confirmaSenha }}</p>
+      <p>{{ aluno.primeiroNome }}</p>
+      <p>{{ aluno.ultimoNome }}</p>
+      <p>{{ aluno.cargo }}</p>
+      <p>{{ aluno.dtNascimento }}</p>
+      <p>{{ aluno.nomeEscola }}</p>
+      <p>{{ aluno.email }}</p>
+      <p>{{ aluno.senha }}</p>
+      <p>{{ aluno.confirmaSenha }}</p>
     </li>
   </ul>
 </section>
