@@ -1,6 +1,6 @@
 import { ECargo } from './ecargo.enum';
 
-export interface IUsuario {
+export interface IProfessor {
     primeiroNome: string;
     ultimoNome: string;
     // cargo: ECargo;

@@ -36,7 +36,8 @@ export const routes: Routes = [
   { path: 'perfil-turma', component: PerfilTurmaComponent },
   { path: 'resolver-questoes', component: ResolverQuestoesComponent },
   { path: 'sucesso', component: ExerciciosRespondidosSucessoComponent },
-  { path: 'cadastro-aluno', component: CadastroAlunosComponent }
+  { path: 'cadastro-aluno', component: CadastroAlunosComponent },
+  { path: 'login', component: LoginComponent }
 
 ];
 

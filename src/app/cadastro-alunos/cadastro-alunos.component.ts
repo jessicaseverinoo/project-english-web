@@ -63,4 +63,15 @@ export class CadastroAlunosComponent implements OnInit {
     this.router.navigateByUrl('login');
   }
 
+  clear() {
+    this.primeiroNome = '';
+    this.ultimoNome = '';
+    this.cargo = '';
+    this.nomeEscola = '';
+    this.dtNascimento = '';
+    this.email = '';
+    this.senha = '';
+    this.confirmaSenha = '';
+  }
+
 }

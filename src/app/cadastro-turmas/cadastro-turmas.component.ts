@@ -51,4 +51,13 @@ export class CadastroTurmasComponent implements OnInit {
     this.turma = this.turmaCollectionRef.valueChanges();
   }
 
+  clear() {
+    this.nomeEscola = '';
+    this.ano = '';
+    this.nivelEducacional = '';
+    this.nomeEscola = '';
+    this.identificadorTurma = '';
+    this.observacoesTurma = '';
+  }
+
 }

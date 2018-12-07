@@ -24,61 +24,20 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-sm-6">
+      <div *ngFor="let turma of turma | async" class="col-sm-6">
         <div class="card bg-light mb-3">
-          <div class="card-header"><span class="strong">Identificador da Turma: </span>@UserNameTurma</div>
+          <div class="card-header"><span class="strong">Identificador da Turma: </span>{{ turma.identificadorTurma }}</div>
           <div class="card-body">
-            <h5 class="card-title"><span class="strong">Escola: </span>Instituto Federal de São Paulo - Campus Catanduva</h5>
+            <h5 class="card-title"><span class="strong">Escola: </span>{{ turma.nomeEscola }}</h5>
             <hr>
-            <p class="card-text"><span class="strong">Ano/Série: </span>1º Ano</p>
-            <p class="card-text"><span class="strong">Nível Educacional: </span>Ensino Médio</p>
-            <p class="card-text"><span class="strong">Observações: </span>aqui as observações sobre cada turma.</p>
+            <p class="card-text"><span class="strong">Ano/Série: </span>{{ turma.ano }}</p>
+            <p class="card-text"><span class="strong">Nível Educacional: </span>{{ turma.nivelEducacional }}</p>
+            <p class="card-text"><span class="strong">Observações: </span>{{ turma.observacoesTurma }}</p>
             <a href="perfil-turma" class="btn btn-outline-info">Visualizar Perfil</a>
           </div>
         </div>
       </div>
 
-      <div class="col-sm-6">
-        <div class="card bg-light mb-3">
-          <div class="card-header"><span class="strong">Identificador da Turma: </span>@UserNameTurma</div>
-          <div class="card-body">
-            <h5 class="card-title"><span class="strong">Escola: </span>Instituto Federal de São Paulo - Campus Catanduva</h5>
-            <hr>
-            <p class="card-text"><span class="strong">Ano/Série: </span>1º Ano</p>
-            <p class="card-text"><span class="strong">Nível Educacional: </span>Ensino Médio</p>
-            <p class="card-text"><span class="strong">Observações: </span>aqui as observações sobre cada turma.</p>
-            <a href="perfil-turma" class="btn btn-outline-info">Visualizar Perfil</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6">
-        <div class="card bg-light mb-3">
-          <div class="card-header"><span class="strong">Identificador da Turma: </span>@UserNameTurma</div>
-          <div class="card-body">
-            <h5 class="card-title"><span class="strong">Escola: </span>Instituto Federal de São Paulo - Campus Catanduva</h5>
-            <hr>
-            <p class="card-text"><span class="strong">Ano/Série: </span>1º Ano</p>
-            <p class="card-text"><span class="strong">Nível Educacional: </span>Ensino Médio</p>
-            <p class="card-text"><span class="strong">Observações: </span>aqui as observações sobre cada turma.</p>
-            <a href="perfil-turma" class="btn btn-outline-info">Visualizar Perfil</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6">
-        <div class="card bg-light mb-3">
-          <div class="card-header"><span class="strong">Identificador da Turma: </span>@UserNameTurma</div>
-          <div class="card-body">
-            <h5 class="card-title"><span class="strong">Escola: </span>Instituto Federal de São Paulo - Campus Catanduva</h5>
-            <hr>
-            <p class="card-text"><span class="strong">Ano/Série: </span>1º Ano</p>
-            <p class="card-text"><span class="strong">Nível Educacional: </span>Ensino Médio</p>
-            <p class="card-text"><span class="strong">Observações: </span>aqui as observações sobre cada turma.</p>
-            <a href="perfil-turma" class="btn btn-outline-info">Visualizar Perfil</a>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>

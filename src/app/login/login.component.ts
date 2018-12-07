@@ -25,7 +25,10 @@ export class LoginComponent {
   public loginFormulario: FormGroup;
   public loginControls: FormControl;
 
-  constructor(public authService: AuthService, private router: Router, private autorization: UserAutorizationService) { }
+  constructor( public authService: AuthService,
+              private router: Router,
+              private autorization: UserAutorizationService
+            ) { }
 
   ngOnInit() {
     this.loginFormulario = new FormGroup({

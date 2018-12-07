@@ -31,41 +31,11 @@
           <th scope="col">Tradução/Resposta</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody *ngFor="let questao of questao | async">
         <tr>
-          <th scope="row">Iniciante</th>
-          <td>How are you?</td>
-          <td>Como você está?</td>
-        </tr>
-
-        <tr>
-          <th scope="row">Iniciante</th>
-          <td>How are you?</td>
-          <td>Como você está?</td>
-        </tr>
-
-        <tr>
-          <th scope="row">Iniciante</th>
-          <td>How are you?</td>
-          <td>Como você está?</td>
-        </tr>
-
-        <tr>
-          <th scope="row">Iniciante</th>
-          <td>How are you?</td>
-          <td>Como você está?</td>
-        </tr>
-
-        <tr>
-          <th scope="row">Iniciante</th>
-          <td>How are you?</td>
-          <td>Como você está?</td>
-        </tr>
-
-        <tr>
-          <th scope="row">Iniciante</th>
-          <td>How are you?</td>
-          <td>Como você está?</td>
+          <th scope="row">{{ questao.nivel }}</th>
+          <td>{{ questao.pergunta }}</td>
+          <td>{{ questao.resposta }}</td>
         </tr>
       </tbody>
     </table>

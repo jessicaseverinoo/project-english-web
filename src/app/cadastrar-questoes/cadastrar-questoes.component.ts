@@ -45,4 +45,10 @@ export class CadastrarQuestoesComponent implements OnInit {
     this.questao = this.questaoCollectionRef.valueChanges();
   }
 
+  clear() {
+    this.nivel = '';
+    this.pergunta = '';
+    this.resposta = '';
+  }
+
 }

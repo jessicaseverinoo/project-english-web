@@ -6,7 +6,7 @@ import { database } from 'firebase';
 import { Usuario } from './../Usuario';
 import { AngularFireList } from '@angular/fire/database';
 import { Router } from '@angular/router';
-import { IUsuario } from './../models/iusuario.model';
+import { IProfessor } from './../models/iprofessor.model';
 
 @Component({
   selector: 'app-cadastro',
@@ -24,18 +24,18 @@ export class CadastroComponent implements OnInit {
   senha: string;
   confirmaSenha: string;
 
-  private contasUsuarios: AngularFirestoreCollection<Usuario>;
-  usuarios: Observable<Usuario[]>;
+  private contasProfessor: AngularFirestoreCollection<IProfessor>;
+  professores: Observable<IProfessor[]>;
 
-  usuarioCollectionRef: AngularFirestoreCollection<Usuario>;
-  usuarios$: Observable<Usuario[]>;
+  usuarioCollectionRef: AngularFirestoreCollection<IProfessor>;
+  professores$: Observable<IProfessor[]>;
 
   constructor(private db: AngularFirestore, private router: Router) {
-    /*this.contasUsuarios = db.collection<IUsuario>('users');
-    this.usuarioCollectionRef = this.db.collection<IUsuario>('users');
-    this.usuarios = this.usuarioCollectionRef.valueChanges();
+    /*this.contasProfessor = db.collection<IProfessor>('professores');
+    this.usuarioCollectionRef = this.db.collection<IProfessor>('professores');
+    this.professores = this.usuarioCollectionRef.valueChanges();
 
-    this.db.doc<IUsuario>('/users/jessica@gmail.com').get().subscribe(res => {
+    this.db.doc<IProfessor>('/professores/jessica@gmail.com').get().subscribe(res => {
 
     });*/
   }
@@ -51,13 +51,13 @@ export class CadastroComponent implements OnInit {
     confirmaSenha: new FormControl('', [Validators.required, Validators.minLength(6)])
   });
 
-  /*criarUsuario (usuario: IUsuario) {
-    this.db.doc<IUsuario>(`users/${usuario.email}`).get().subscribe(res => {
+  /*criarUsuario (usuario: IProfessor) {
+    this.db.doc<IProfessor>(`professores/${usuario.email}`).get().subscribe(res => {
       if (res.exists) {
         alert('O usuário já é registrado, por favor autentique-se');
       } else {
         console.log('carregando...');
-        this.db.doc<IUsuario>(`users/${usuario.email}`)
+        this.db.doc<IProfessor>(`professores/${usuario.email}`)
             .set(usuario)
             .then(() => {
               console.log('sucesso >>>', res);
@@ -72,8 +72,8 @@ export class CadastroComponent implements OnInit {
     });
   }*/
 
-  criarUsuario(usuario: IUsuario) {
-    this.db.collection('users').doc(this.email).set({
+  criarUsuario(usuario: IProfessor) {
+    this.db.collection('professores').doc(this.email).set({
     'primeiroNome': this.primeiroNome,
     'ultimoNome': this.ultimoNome,
     'dtNascimento': this.dtNascimento,
@@ -84,13 +84,13 @@ export class CadastroComponent implements OnInit {
     'confirmaSenha': this.confirmaSenha});
   }
 
-  editaUsuario (usuario: IUsuario) {
-    this.db.doc<IUsuario>(`/users/${usuario.email}`).get().subscribe(res => {
+  editaUsuario (usuario: IProfessor) {
+    this.db.doc<IProfessor>(`/professores/${usuario.email}`).get().subscribe(res => {
       if (!res.exists) {
         alert('O usuário não existe! Verifique.');
       } else {
         console.log('carregando...');
-        this.db.doc<IUsuario>(`/users/${usuario.email}`)
+        this.db.doc<IProfessor>(`/professores/${usuario.email}`)
             .set(usuario)
             .then(() => {
               console.log('sucesso >>>', res);
@@ -105,13 +105,13 @@ export class CadastroComponent implements OnInit {
     });
   }
 
-  deletaUsuario (usuario: IUsuario) {
-    this.db.doc<IUsuario>(`/users/${usuario.email}`).get().subscribe(res => {
+  deletaUsuario (usuario: IProfessor) {
+    this.db.doc<IProfessor>(`/professores/${usuario.email}`).get().subscribe(res => {
       if (!res.exists) {
         alert('O usuário não existe! Verifique.');
       } else {
         console.log('carregando...');
-        this.db.doc<IUsuario>(`/users/${usuario.email}`)
+        this.db.doc<IProfessor>(`/professores/${usuario.email}`)
             .delete()
             .then(() => {
               console.log('sucesso >>>', res);
@@ -150,9 +150,9 @@ export class CadastroComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.usuarios = this.db.collection<Usuario>('usuarios').valueChanges();
-    this.usuarioCollectionRef = this.db.collection('users');
-    this.usuarios = this.usuarioCollectionRef.valueChanges();
+    // this.professores = this.db.collection<Usuario>('professores').valueChanges();
+    this.usuarioCollectionRef = this.db.collection('professores');
+    this.professores = this.usuarioCollectionRef.valueChanges();
   }
 
   updateProfile() {
@@ -170,6 +170,17 @@ export class CadastroComponent implements OnInit {
 
   login() {
     this.router.navigateByUrl('login');
+  }
+
+  clear() {
+    this.primeiroNome = '';
+    this.ultimoNome = '';
+    this.cargo = '';
+    this.nomeEscola = '';
+    this.dtNascimento = '';
+    this.email = '';
+    this.senha = '';
+    this.confirmaSenha = '';
   }
 
 }
