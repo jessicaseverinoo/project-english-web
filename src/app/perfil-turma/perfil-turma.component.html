@@ -43,57 +43,8 @@
       <div class="card-body">
         <h1>Exercícios</h1>
         <div class="row">
-          <div class="col-sm-6">
-            <div class="card bg-light mb-3">
-              <div class="card-header"><span class="strong">Identificador do Exercício: </span>@NomeIdentificador</div>
-              <div class="card-body">
-                <h5 class="card-title">Lista de Exercícios</h5>
-                <p>
-                  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    Visualizar Exercícios
-                  </a>
-                </p>
-                <div class="collapse" id="collapseExample">
-                  <div class="card card-body">
-                    <ul>
-                      <li>
-                        <span>
-                          <button type="button" class="btn btn-danger">Remover</button>
-                        </span><span class="strong">
-                        1. </span>How are you
-                      </li>
-                      <li>
-                        <span>
-                          <button type="button" class="btn btn-danger">Remover</button>
-                        </span><span class="strong">
-                        2. </span>How are you
-                      </li>
-                      <li>
-                        <span>
-                          <button type="button" class="btn btn-danger">Remover</button>
-                        </span><span class="strong">
-                        3. </span>How are you
-                      </li>
-                      <li>
-                        <span>
-                          <button type="button" class="btn btn-danger">Remover</button>
-                        </span><span class="strong">
-                        4. </span>How are you
-                      </li>
-                      <li>
-                        <span>
-                          <button type="button" class="btn btn-danger">Remover</button>
-                        </span><span class="strong">
-                        5. </span>How are you
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-sm-6">
+          <div class="col-sm-12">
             <div class="card bg-light mb-3">
               <div class="card-header"><span class="strong">Identificador do Exercício:   </span>@NomeIdentificador</div>
               <div class="card-body">
@@ -105,36 +56,12 @@
                 </p>
                 <div class="collapse" id="collapseExample">
                   <div class="card card-body">
-                    <ul>
+                    <ul *ngFor="let questao of questao | async">
                       <li>
                         <span>
                           <button type="button" class="btn btn-danger">Remover</button>
                         </span><span class="strong">
-                        1. </span>How are you
-                      </li>
-                      <li>
-                        <span>
-                          <button type="button" class="btn btn-danger">Remover</button>
-                        </span><span class="strong">
-                        2. </span>How are you
-                      </li>
-                      <li>
-                        <span>
-                          <button type="button" class="btn btn-danger">Remover</button>
-                        </span><span class="strong">
-                        3. </span>How are you
-                      </li>
-                      <li>
-                        <span>
-                          <button type="button" class="btn btn-danger">Remover</button>
-                        </span><span class="strong">
-                        4. </span>How are you
-                      </li>
-                      <li>
-                        <span>
-                          <button type="button" class="btn btn-danger">Remover</button>
-                        </span><span class="strong">
-                        5. </span>How are you
+                        </span>&nbsp;{{ questao.pergunta }}
                       </li>
                     </ul>
                   </div>
@@ -143,105 +70,6 @@
             </div>
           </div>
 
-          <div class="col-sm-6">
-            <div class="card bg-light mb-3">
-              <div class="card-header"><span class="strong">Identificador do Exercício:   </span>@NomeIdentificador</div>
-              <div class="card-body">
-                <h5 class="card-title">Lista de Exercícios</h5>
-                <p>
-                  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    Visualizar Exercícios
-                  </a>
-                </p>
-                <div class="collapse" id="collapseExample">
-                  <div class="card card-body">
-                    <ul>
-                      <li>
-                        <span>
-                          <button type="button" class="btn btn-danger">Remover</button>
-                        </span><span class="strong">
-                        1. </span>How are you
-                      </li>
-                      <li>
-                        <span>
-                          <button type="button" class="btn btn-danger">Remover</button>
-                        </span><span class="strong">
-                        2. </span>How are you
-                      </li>
-                      <li>
-                        <span>
-                          <button type="button" class="btn btn-danger">Remover</button>
-                        </span><span class="strong">
-                        3. </span>How are you
-                      </li>
-                      <li>
-                        <span>
-                          <button type="button" class="btn btn-danger">Remover</button>
-                        </span><span class="strong">
-                        4. </span>How are you
-                      </li>
-                      <li>
-                        <span>
-                          <button type="button" class="btn btn-danger">Remover</button>
-                        </span><span class="strong">
-                        5. </span>How are you
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-6">
-            <div class="card bg-light mb-3">
-              <div class="card-header"><span class="strong">Identificador do Exercício:   </span>@NomeIdentificador</div>
-              <div class="card-body">
-                <h5 class="card-title">Lista de Exercícios</h5>
-                <p>
-                  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    Visualizar Exercícios
-                  </a>
-                </p>
-                <div class="collapse" id="collapseExample">
-                  <div class="card card-body">
-                    <ul>
-                      <li>
-                        <span>
-                          <button type="button" class="btn btn-danger">Remover</button>
-                        </span><span class="strong">
-                        1. </span>How are you
-                      </li>
-                      <li>
-                        <span>
-                          <button type="button" class="btn btn-danger">Remover</button>
-                        </span><span class="strong">
-                        2. </span>How are you
-                      </li>
-                      <li>
-                        <span>
-                          <button type="button" class="btn btn-danger">Remover</button>
-                        </span><span class="strong">
-                        3. </span>How are you
-                      </li>
-                      <li>
-                        <span>
-                          <button type="button" class="btn btn-danger">Remover</button>
-                        </span><span class="strong">
-                        4. </span>How are you
-                      </li>
-                      <li>
-                        <span>
-                          <button type="button" class="btn btn-danger">Remover</button>
-                        </span><span class="strong">
-                        5. </span>How are you
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -258,42 +86,13 @@
                 <th scope="col">Aluno</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody  *ngFor="let aluno of alunos | async">
               <tr>
                 <th><input type="checkbox" aria-label="Checkbox for following text input"> Excluir</th>
                 <td>Editar</td>
-                <td>Como você está?</td>
+                <td>{{ aluno.primeiroNome }} {{ aluno.ultimoNome }}</td>
               </tr>
-    
-              <tr>
-                <th><input type="checkbox" aria-label="Checkbox for following text input"> Excluir</th>
-                <td>Editar</td>
-                <td>Como você está?</td>
-              </tr>
-    
-              <tr>
-                <th><input type="checkbox" aria-label="Checkbox for following text input"> Excluir</th>
-                <td>Editar</td>
-                <td>Como você está?</td>
-              </tr>
-    
-              <tr>
-                <th><input type="checkbox" aria-label="Checkbox for following text input"> Excluir</th>
-                <td>Editar</td>
-                <td>Como você está?</td>
-              </tr>
-    
-              <tr>
-                <th><input type="checkbox" aria-label="Checkbox for following text input"> Excluir</th>
-                <td>Editar</td>
-                <td>Como você está?</td>
-              </tr>
-    
-              <tr>
-                <th><input type="checkbox" aria-label="Checkbox for following text input"> Excluir</th>
-                <td>Editar</td>
-                <td>Como você está?</td>
-              </tr>
+
             </tbody>
           </table>
         </div>

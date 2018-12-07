@@ -69,14 +69,8 @@
 
   <ul *ngFor="let aluno of alunos | async">
     <li>
-      <p>{{ aluno.primeiroNome }}</p>
-      <p>{{ aluno.ultimoNome }}</p>
-      <p>{{ aluno.cargo }}</p>
-      <p>{{ aluno.dtNascimento }}</p>
-      <p>{{ aluno.nomeEscola }}</p>
-      <p>{{ aluno.email }}</p>
-      <p>{{ aluno.senha }}</p>
-      <p>{{ aluno.confirmaSenha }}</p>
+      <p>{{ aluno.primeiroNome }} | {{ aluno.ultimoNome }} | {{ aluno.cargo }} | {{ aluno.dtNascimento }}</p>
+      <p>{{ aluno.nomeEscola }} | {{ aluno.email }} | {{ aluno.senha }} | {{ aluno.confirmaSenha }}</p>
     </li>
   </ul>
 </section>
