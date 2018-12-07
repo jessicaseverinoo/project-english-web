@@ -1,3 +1,5 @@
+import { TentativasComponent } from './tentativas/tentativas.component';
+import { Coracao } from './shared/coracao.model';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -30,6 +32,7 @@ import { AtribuirExerciciosTurmasComponent } from './atribuir-exercicios-turmas/
 import { PerfilTurmaComponent } from './perfil-turma/perfil-turma.component';
 import { ExerciciosRespondidosSucessoComponent } from './exercicios-respondidos-sucesso/exercicios-respondidos-sucesso.component';
 import { CadastroAlunosComponent } from './cadastro-alunos/cadastro-alunos.component';
+import { ProgressoComponent } from './progresso/progresso.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +54,9 @@ import { CadastroAlunosComponent } from './cadastro-alunos/cadastro-alunos.compo
     AtribuirExerciciosTurmasComponent,
     PerfilTurmaComponent,
     ExerciciosRespondidosSucessoComponent,
-    CadastroAlunosComponent
+    CadastroAlunosComponent,
+    ProgressoComponent,
+    TentativasComponent
   ],
   imports: [
     BrowserModule,
