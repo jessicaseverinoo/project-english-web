@@ -1,5 +1,9 @@
 # Eniw
 
+Eniew foi um projeto criado para um trabalho da faculdade como parte da nota final, seu objetivo foi criar um duolingo que tinha uma lista de 10 perguntas de múltipla escolha e o usuário deveria selecionar a perguntar certa
+
+______________________
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
 
 ## Development server
